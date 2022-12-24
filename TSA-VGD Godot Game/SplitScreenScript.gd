@@ -1,24 +1,23 @@
-extends Node2D
+extends Node
 
 
-onready var players := { 
-	"1" : {
-		viewport = $"HBoxContainer/ViewportContainer/Viewport",
-		camera = $"HBoxContainer/ViewportContainer/Viewport/Camera2D",
-		player = $HBoxContainer/ViewportContainer/Viewport/Node2D/LobbyPlayer1,
-	},
-	"2" : {
-		viewport = $"HBoxContainer/ViewportContainer2/Viewport",
-		camera = $"HBoxContainer/ViewportContainer2/Viewport/Camera2D",
-		player = $HBoxContainer/ViewportContainer/Viewport/Node2D/LobbyPlayer2,
-		
-	}
-		
-}
+onready var viewport1 = $Viewports/ViewportContainer1/Viewport1
+onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
+onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
+onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
+onready var world = $Viewports/ViewportContainer1/Viewport1/Node2D
 
-func _ready() -> void:
-	players["2"].viewport.world_2d = players["1"].viewport.world_2d
-	for node in players.values():
-		var remote_transform := RemoteTransform2D.new()
-		remote_transform.remote_path = node.camera.get_path()
-		node.player.add_child(remote_transform)
+func _ready():
+	viewport2.world_2d = viewport1.world_2d
+	camera1.target = world.get_node("LobbyPlayer")
+	camera2.target = world.get_node("LobbyPlayer2")
+	#set_camera_limits()
+
+#func set_camera_limits():
+	#var map_limits = world.get_used_rect()
+	#var map_cellsize = world.cell_size
+	#for cam in [camera1, camera2]:
+		#cam.limit_left = map_limits.position.x * map_cellsize.x
+		#cam.limit_right = map_limits.end.x * map_cellsize.x
+		#cam.limit_top = map_limits.position.y * map_cellsize.y
+		#cam.limit_bottom = map_limits.end.y * map_cellsize.y
