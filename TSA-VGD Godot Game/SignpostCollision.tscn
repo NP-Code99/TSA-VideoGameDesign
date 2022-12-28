@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://SignpostScript.gd" type="Script" id=2]
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 20.3961
+radius = 19.0
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 81.0247
@@ -26,27 +25,24 @@ corner_radius_bottom_left = 5
 size = 10
 font_data = ExtResource( 3 )
 
-[node name="Signpost" type="StaticBody2D"]
+[node name="SignpostCollision" type="StaticBody2D"]
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-texture = ExtResource( 1 )
-
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, 12 )
+position = Vector2( 0, 9 )
 shape = SubResource( 2 )
 
 [node name="Panel" type="Panel" parent="."]
 visible = false
 margin_left = -61.0
-margin_top = -61.0
+margin_top = -139.0
 margin_right = 56.0
-margin_bottom = -40.0
+margin_bottom = -118.0
 custom_styles/panel = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
