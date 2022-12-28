@@ -1108,7 +1108,6 @@ tile_data = PoolIntArray( -2949095, 0, 0, -2949072, 0, 0, -2818082, 536870914, 0
 position = Vector2( 152, 95 )
 
 [node name="Camera2D" type="Camera2D" parent="LobbyPlayer"]
-current = true
 smoothing_enabled = true
 smoothing_speed = 3.0
 
