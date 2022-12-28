@@ -11,13 +11,13 @@ export var gravity := 4500.0
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var _horizontal_direction = (
 		Input.get_action_strength("move_right")
 		- Input.get_action_strength("move_left")
 	)
 	_velocity.x = _horizontal_direction * speed
-	_velocity.y += gravity * delta
+	_velocity.y += gravity * _delta
 	
 	var is_falling := _velocity.y > 0.0 and not is_on_floor()
 	var is_jumping := Input.is_action_just_pressed("move_up") and is_on_floor()
