@@ -13,16 +13,16 @@ var _velocity := Vector2.ZERO
 
 func _physics_process(_delta: float) -> void:
 	var _horizontal_direction = (
-		Input.get_action_strength("move_right")
-		- Input.get_action_strength("move_left")
+		Input.get_action_strength("arrow_right")
+		- Input.get_action_strength("arrow_left")
 	)
 	_velocity.x = _horizontal_direction * speed
 	_velocity.y += gravity * _delta
 	
 	var is_falling := _velocity.y > 0.0 and not is_on_floor()
-	var is_jumping := Input.is_action_just_pressed("move_up") and is_on_floor()
-	var is_double_jumping := Input.is_action_just_pressed("move_up") and is_falling
-	var is_jump_cancelled := Input.is_action_just_released("move_up") and _velocity.y < 0.0
+	var is_jumping := Input.is_action_just_pressed("arrow_up") and is_on_floor()
+	var is_double_jumping := Input.is_action_just_pressed("arrow_up") and is_falling
+	var is_jump_cancelled := Input.is_action_just_released("arrow_up") and _velocity.y < 0.0
 	var is_idling := is_on_floor() and is_zero_approx(_velocity.x)
 	var is_running := is_on_floor() and not is_zero_approx(_velocity.x)
 	
@@ -38,10 +38,11 @@ func _physics_process(_delta: float) -> void:
 	elif is_idling or is_running:
 		_jumps_made = 0
 	
-	if Input.is_action_pressed("key_respawn1"):
-		get_node(".").position.x = 0
+	if Input.is_action_pressed("key_respawn2"):
+		get_node(".").position.x = -200
 		get_node(".").position.y = 0
 		
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	
 	
+
