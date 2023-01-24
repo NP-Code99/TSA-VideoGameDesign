@@ -38,6 +38,10 @@ func _physics_process(_delta: float) -> void:
 	elif is_idling or is_running:
 		_jumps_made = 0
 	
+	if Input.is_action_pressed("key_respawn1"):
+		get_node(".").position.x = 0
+		get_node(".").position.y = 0
+		
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	
 	
