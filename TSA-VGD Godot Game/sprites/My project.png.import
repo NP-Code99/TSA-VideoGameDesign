@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/—Pngtree—red flame burning game banner_1050278 (1).jpg-0c9d87d9963d5c93562134fd52cc31a4.stex"
+path="res://.import/My project.png-062ac67c628b13228937c3722e263aee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://—Pngtree—red flame burning game banner_1050278 (1).jpg"
-dest_files=[ "res://.import/—Pngtree—red flame burning game banner_1050278 (1).jpg-0c9d87d9963d5c93562134fd52cc31a4.stex" ]
+source_file="res://sprites/My project.png"
+dest_files=[ "res://.import/My project.png-062ac67c628b13228937c3722e263aee.stex" ]
 
 [params]
 
