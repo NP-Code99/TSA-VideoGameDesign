@@ -3,15 +3,12 @@
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://StartingScreenScript.gd" type="Script" id=2]
 [ext_resource path="res://LobbySplitScreen.tscn" type="PackedScene" id=3]
+[ext_resource path="res://background/party themed.jpg" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=6]
 size = 50
 outline_color = Color( 0.137255, 0.0941176, 0.0941176, 1 )
 font_data = ExtResource( 1 )
-
-[sub_resource type="StreamTexture" id=7]
-flags = 4
-load_path = "res://.import/party themed.jpg-a1a27f2b53a2482148902a22c149dae2.stex"
 
 [sub_resource type="DynamicFont" id=2]
 size = 45
@@ -48,7 +45,6 @@ __meta__ = {
 mainGameScene = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-visible = false
 margin_right = 1034.0
 margin_bottom = 596.0
 size_flags_horizontal = 3
@@ -75,24 +71,6 @@ text = "Party Mania
 "
 align = 1
 valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="TextureRect" type="TextureRect" parent="Title"]
-show_behind_parent = true
-anchor_left = -0.501
-anchor_top = -1.388
-anchor_right = 1.538
-anchor_bottom = 4.44
-margin_left = 0.00302124
-margin_top = -0.0359955
-margin_right = -515.614
-margin_bottom = -264.32
-rect_scale = Vector2( 2.01054, 1.78669 )
-texture = SubResource( 7 )
-expand = true
-stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
