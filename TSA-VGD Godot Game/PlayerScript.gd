@@ -45,3 +45,8 @@ func _physics_process(_delta: float) -> void:
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	
 	
+
+
+func _on_DeadZone_body_entered(body: Node) -> void:
+	if body.name == "Player" || body.name == "Player2":
+		body.position = Vector2(0, 0) # set the player's position to the desired respawn point
