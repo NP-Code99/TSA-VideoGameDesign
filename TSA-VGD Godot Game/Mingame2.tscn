@@ -1,9 +1,10 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://LobbyPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://26_april_8.png" type="Texture" id=2]
 [ext_resource path="res://Tmaze.png" type="Texture" id=3]
 [ext_resource path="res://llammabih.png" type="Texture" id=4]
+[ext_resource path="res://LobbyPlayer2.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SegmentShape2D" id=7]
 a = Vector2( -21, -1.42857 )
@@ -74,6 +75,14 @@ extents = Vector2( 5.74915, 15.0529 )
 
 [node name="Node2D" type="Node2D"]
 
+[node name="pink backround" type="Sprite" parent="."]
+position = Vector2( -232.717, -70.1059 )
+scale = Vector2( 0.286629, 0.25491 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
 [node name="LobbyPlayer" parent="." instance=ExtResource( 1 )]
 position = Vector2( -246, 210 )
 scale = Vector2( 0.7, 0.7 )
@@ -85,10 +94,9 @@ zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 smoothing_speed = 3.0
 
-[node name="pink backround" type="Sprite" parent="."]
-position = Vector2( -232.717, -70.1059 )
-scale = Vector2( 0.286629, 0.25491 )
-texture = ExtResource( 2 )
+[node name="LobbyPlayer2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 270, 201 )
+scale = Vector2( 1.05, 1.05 )
 
 [node name="Tmaze2 mom" type="Sprite" parent="."]
 position = Vector2( 270, -38 )
@@ -364,8 +372,6 @@ scale = Vector2( 0.256757, 0.256757 )
 position = Vector2( -255, -252 )
 scale = Vector2( 1, 2.8 )
 shape = SubResource( 7 )
-
-[node name="StaticBody2D" type="StaticBody2D" parent="Tmaze2 dad/dad collision/SB-Ltop"]
 
 [node name="SB-Rtop" type="Area2D" parent="Tmaze2 dad/dad collision"]
 position = Vector2( 63.4189, 9.75675 )
@@ -645,18 +651,18 @@ visible = false
 scale = Vector2( 0.0984411, 0.126091 )
 texture = ExtResource( 4 )
 
-[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Ltop" to="LobbyPlayer" method="_on_SBLtop_body_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB-Rtop" to="LobbyPlayer" method="_on_SBRtop_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB-Lbottom" to="LobbyPlayer" method="_on_SBLbottom_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB-LeftW" to="LobbyPlayer" method="_on_SBLeftW_body_shape_entered"]
-[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-RightW" to="LobbyPlayer" method="_on_SBRightW_body_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB-Rbottom" to="LobbyPlayer" method="_on_SBRbottom_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB H (1,1)" to="LobbyPlayer" method="_on_SB_H_11_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB H (2,1)" to="LobbyPlayer" method="_on_SB_H_21_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB H (1,2)" to="LobbyPlayer" method="_on_SB_H_12_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/SB H (2,2)" to="LobbyPlayer" method="_on_SB_H_22_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/Most of horizontal" to="LobbyPlayer" method="_on_Most_of_horizontal_body_shape_entered"]
-[connection signal="body_shape_entered" from="Tmaze2 mom/mom collision/Vertical" to="LobbyPlayer" method="_on_Vertical_body_shape_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Ltop" to="LobbyPlayer2" method="_on_SBLtop_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Rtop" to="LobbyPlayer2" method="_on_SBRtop_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Lbottom" to="LobbyPlayer2" method="_on_SBLbottom_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-LeftW" to="LobbyPlayer2" method="_on_SBLeftW_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-RightW" to="LobbyPlayer2" method="_on_SBRightW_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Rbottom" to="LobbyPlayer2" method="_on_SBRbottom_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (1,1)" to="LobbyPlayer2" method="_on_SB_H_11_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (2,1)" to="LobbyPlayer2" method="_on_SB_H_21_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (1,2)" to="LobbyPlayer2" method="_on_SB_H_12_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (2,2)" to="LobbyPlayer2" method="_on_SB_H_22_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/Most of horizontal" to="LobbyPlayer2" method="_on_Most_of_horizontal_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/Vertical" to="LobbyPlayer2" method="_on_Vertical_body_entered"]
 [connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-Ltop" to="LobbyPlayer" method="_on_SBLtop_body_entered"]
 [connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-Rtop" to="LobbyPlayer" method="_on_SBRtop_body_entered"]
 [connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-Lbottom" to="LobbyPlayer" method="_on_SBLbottom_body_entered"]

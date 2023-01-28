@@ -1564,8 +1564,7 @@ points = PoolVector2Array( 9, 21, 90, 21, 90, 111, 9, 111 )
 } ]
 18/z_index = 0
 
-[node name="Node2D" type="Node2D"]
-script = ExtResource( 14 )
+[node name="Node2D2" type="Node2D"]
 
 [node name="Tilemaps" type="Node2D" parent="."]
 
@@ -1592,8 +1591,6 @@ tile_data = PoolIntArray( -393228, 9, 0, -393226, 10, 0, -393222, 11, 0, -393218
 
 [node name="Sullivan" parent="." instance=ExtResource( 2 )]
 position = Vector2( 152, 95 )
-collision_layer = 32
-collision_mask = 32
 
 [node name="Camera2D" type="Camera2D" parent="Sullivan"]
 current = true
