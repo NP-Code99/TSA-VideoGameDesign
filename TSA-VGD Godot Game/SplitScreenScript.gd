@@ -9,8 +9,8 @@ onready var world = $Viewports/ViewportContainer1/Viewport1/Node2D
 
 func _ready():
 	viewport2.world_2d = viewport1.world_2d
-	camera1.target = world.get_node("LobbyPlayer")
-	camera2.target = world.get_node("LobbyPlayer2")
+	camera1.target = world.get_node("Sullivan")
+	camera2.target = world.get_node("Stephanie")
 	#set_camera_limits()
 
 #func set_camera_limits():
