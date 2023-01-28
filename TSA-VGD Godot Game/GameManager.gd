@@ -44,7 +44,7 @@ func dealDeck():
 	deck.shuffle()
 	var c = 0
 	while c < deck.size():
-		Game.get_node('grid').add_child(deck[c])
+		#Game.get_node('grid').add_child(deck[c])
 		c += 1
 
 func chooseCard(var c):
