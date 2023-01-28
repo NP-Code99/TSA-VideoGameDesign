@@ -3,26 +3,27 @@ extends KinematicBody2D
 var velocity : Vector2 = Vector2()
 var direction : Vector2 = Vector2()
 
+onready var animatedSprite = $AnimatedSprite
 func read_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("arrow_up"):
 		velocity.y -= 1
 		direction = Vector2(0, -1)
-		$AnimationPlayer.play("WalkUp")
+		animatedSprite.animation = "WalkBack"
 	elif Input.is_action_pressed("arrow_down"):
 		velocity.y += 1 
 		direction = Vector2(0, 1) 
-		$AnimationPlayer.play("WalkDown")
+		animatedSprite.animation = "WalkFront"
 	elif Input.is_action_pressed("arrow_left"):
 		velocity.x -= 1
 		direction = Vector2(-1, 0)
-		$AnimationPlayer.play("WalkRight")
+		animatedSprite.animation = "WalkLeft"
 	elif Input.is_action_pressed("arrow_right"):
 		velocity.x += 1
 		direction = Vector2(1, 0)
-		$AnimationPlayer.play("WalkLeft")
+		animatedSprite.animation = "WalkRight"
 	else:
-		$AnimationPlayer.play("Idle")
+		animatedSprite.animation = "Idle"
 	
 	velocity = velocity.normalized()
 	velocity = move_and_slide(velocity * 150)

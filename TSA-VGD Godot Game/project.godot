@@ -37,6 +37,7 @@ window/stretch/aspect="keep"
 
 Layer=false
 Collision=false
+controls=false
 
 [input]
 
