@@ -16,9 +16,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 custom_constants/separation = 5
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="ViewportContainer1" type="ViewportContainer" parent="Viewports"]
 margin_right = 509.0
@@ -67,9 +64,6 @@ rect_pivot_offset = Vector2( 139, 20 )
 custom_colors/font_color_shadow = Color( 0.0705882, 0.054902, 0.054902, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Sullivan"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Label2" type="Label" parent="."]
 margin_left = 674.0
@@ -81,6 +75,3 @@ rect_pivot_offset = Vector2( 139, 20 )
 custom_colors/font_color_shadow = Color( 0.105882, 0.0745098, 0.0745098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Ste[phanie"
-__meta__ = {
-"_edit_use_anchors_": false
-}
