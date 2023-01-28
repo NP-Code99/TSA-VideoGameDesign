@@ -4,7 +4,7 @@ onready var Game = get_node ('/root/Game/')
 
 var deck = Array()
 
-var cardBack = preload("res://assets/Anirudh Assests/cards/cardBack_red2.png")
+var cardBack = preload ("res://assets/Anirudh Assests/cards/cardBack_red2.png")
 
 var card1
 var card2
@@ -36,7 +36,7 @@ func fillDeck():
 	while s < 5:
 		v = 1
 		while v < 14:
-			#deck.append(Card.new(s,v))
+			deck.append(Card.new(s,v))
 			v =  v + 1
 		s+= 1
 		

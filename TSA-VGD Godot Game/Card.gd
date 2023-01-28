@@ -17,12 +17,11 @@ func _init(var s, var v):
 	value = v
 	suit = s
 	face = load("res://assets/Anirudh Assests/cards/card-"+str(suit)+"-"+str(value)+".png")
-	#back = GameManager.cardBack
+	back = GameManager.cardBack
 	set_normal_texture(back)
 	
 func _pressed():
-	#GameManager.chooseCard(self)
-	pass
+	GameManager.chooseCard(self)
 	
 func flip():
 	if get_normal_texture() == back:
