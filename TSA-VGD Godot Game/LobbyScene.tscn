@@ -1638,17 +1638,5 @@ position = Vector2( -2000, -175 )
 [node name="Checkpoint2Collision" parent="." instance=ExtResource( 11 )]
 position = Vector2( -1008, -1651 )
 
-[node name="Label" type="Label" parent="."]
-margin_left = 108.0
-margin_top = -178.0
-margin_right = 274.0
-margin_bottom = -61.0
-text = "Do WASD to Die"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="guide_npc" parent="." instance=ExtResource( 12 )]
 position = Vector2( -8, -81 )
