@@ -10,5 +10,5 @@ func _on_Area2D_body_entered(body: Node) -> void:
 		get_node("Panel").rect_size.y = get_node("Panel/Label").rect_size.y + 16
 		
 func _on_Area2D_body_exited(body: Node) -> void:
-	if body.name == "LobbyPlayer" or body.name == "LobbyPlayer2": 
+	if body.name == "Sullivan" or body.name == "Stephanie": 
 		get_node("Panel").hide()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://assets/Texture/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://LobbyPlayer.tscn" type="PackedScene" id=2]
@@ -13,7 +13,6 @@
 [ext_resource path="res://Checkpoint Collisions/Checkpoint2Collision.tscn" type="PackedScene" id=11]
 [ext_resource path="res://dialogues/guide_npc.tscn" type="PackedScene" id=12]
 [ext_resource path="res://lobby_loop.wav" type="AudioStream" id=13]
-[ext_resource path="res://LobbySceneScript.gd" type="Script" id=14]
 
 [sub_resource type="TileSet" id=1]
 0/name = "TX Tileset Grass.png 0"
@@ -699,6 +698,15 @@ points = PoolVector2Array( 0, 32, 0, 32, 0, 32 )
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 32, 0, 32, 0, 0, 32, 0 )
 
+[sub_resource type="ConvexPolygonShape2D" id=33]
+points = PoolVector2Array( 3, 0, 30, 0, 30, 32, 3, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=34]
+points = PoolVector2Array( 4, 0, 31, 0, 31, 32, 4, 32 )
+
+[sub_resource type="ConvexPolygonShape2D" id=35]
+points = PoolVector2Array( 2, 0, 29, 0, 29, 32, 2, 32 )
+
 [sub_resource type="TileSet" id=2]
 0/name = "TX Plant.png 0"
 0/texture = ExtResource( 5 )
@@ -752,9 +760,16 @@ points = PoolVector2Array( 0, 32, 0, 32, 0, 0, 32, 0 )
 3/navigation_offset = Vector2( 0, 0 )
 3/shape_offset = Vector2( 0, 0 )
 3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape = SubResource( 33 )
 3/shape_one_way = false
-3/shape_one_way_margin = 0.0
-3/shapes = [  ]
+3/shape_one_way_margin = 1.0
+3/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 33 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 3/z_index = 0
 4/name = "TX Tileset Grass.png 4"
 4/texture = ExtResource( 1 )
@@ -822,9 +837,16 @@ points = PoolVector2Array( 0, 32, 0, 32, 0, 0, 32, 0 )
 8/navigation_offset = Vector2( 0, 0 )
 8/shape_offset = Vector2( 0, 0 )
 8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape = SubResource( 34 )
 8/shape_one_way = false
-8/shape_one_way_margin = 0.0
-8/shapes = [  ]
+8/shape_one_way_margin = 1.0
+8/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 34 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 8/z_index = 0
 9/name = "TX Props.png 9"
 9/texture = ExtResource( 3 )
@@ -836,9 +858,16 @@ points = PoolVector2Array( 0, 32, 0, 32, 0, 0, 32, 0 )
 9/navigation_offset = Vector2( 0, 0 )
 9/shape_offset = Vector2( 0, 0 )
 9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape = SubResource( 35 )
 9/shape_one_way = false
-9/shape_one_way_margin = 0.0
-9/shapes = [  ]
+9/shape_one_way_margin = 1.0
+9/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 35 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
 9/z_index = 0
 10/name = "TX Props.png 10"
 10/texture = ExtResource( 3 )
