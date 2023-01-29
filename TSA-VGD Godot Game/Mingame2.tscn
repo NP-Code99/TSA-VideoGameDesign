@@ -1,8 +1,10 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://LobbyPlayer.tscn" type="PackedScene" id=1]
-[ext_resource path="res://background/background-chocolate-textur-8BIT-PIXEL-Graphics-17982476-1-580x387.jpg" type="Texture" id=2]
+[ext_resource path="res://26_april_8.png" type="Texture" id=2]
 [ext_resource path="res://Tmaze.png" type="Texture" id=3]
+[ext_resource path="res://llammabih.png" type="Texture" id=4]
+[ext_resource path="res://LobbyPlayer2.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SegmentShape2D" id=7]
 a = Vector2( -21, -1.42857 )
@@ -44,265 +46,633 @@ b = Vector2( -405.996, 55.6025 )
 a = Vector2( -215.476, 184.615 )
 b = Vector2( -215.909, 121 )
 
+[sub_resource type="SegmentShape2D" id=12]
+a = Vector2( -178.46, 26.0988 )
+b = Vector2( -154.1, 26.0988 )
+
+[sub_resource type="SegmentShape2D" id=13]
+a = Vector2( -27.0001, 180 )
+b = Vector2( 31.9998, 179 )
+
+[sub_resource type="SegmentShape2D" id=14]
+a = Vector2( 468.999, 180 )
+b = Vector2( 510.999, 179 )
+
+[sub_resource type="SegmentShape2D" id=15]
+a = Vector2( -508, 300 )
+b = Vector2( 512, 296 )
+
+[sub_resource type="SegmentShape2D" id=16]
+a = Vector2( 511.999, 177 )
+b = Vector2( 510.999, 295.999 )
+
+[sub_resource type="SegmentShape2D" id=17]
+a = Vector2( -508.999, 180 )
+b = Vector2( -508.999, 297.999 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 5.74915, 15.0529 )
+
 [node name="Node2D" type="Node2D"]
 
-[node name="Background-chocolate-textur-8bit-Pixel-Graphics-17982476-1-580X387" type="Sprite" parent="."]
-position = Vector2( 1.42109e-14, -1 )
-scale = Vector2( 1.76207, 1.54005 )
+[node name="pink backround" type="Sprite" parent="."]
+position = Vector2( -232.717, -70.1059 )
+scale = Vector2( 0.286629, 0.25491 )
 texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="LobbyPlayer" parent="." instance=ExtResource( 1 )]
-position = Vector2( 194, 37 )
+position = Vector2( -246, 210 )
 scale = Vector2( 0.7, 0.7 )
+z_index = 4
 
 [node name="Camera2D" type="Camera2D" parent="LobbyPlayer"]
-current = true
+scale = Vector2( -0.326016, 0.618108 )
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 smoothing_speed = 3.0
 
-[node name="Tmaze2 dad" type="Sprite" parent="."]
-position = Vector2( -247, -38 )
+[node name="LobbyPlayer2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 270, 201 )
+scale = Vector2( 1.05, 1.05 )
+
+[node name="Tmaze2 mom" type="Sprite" parent="."]
+position = Vector2( 270, -38 )
 scale = Vector2( 3.89474, 3.89474 )
 texture = ExtResource( 3 )
 
-[node name="SB-Ltop" type="StaticBody2D" parent="."]
+[node name="mom collision" type="Node2D" parent="Tmaze2 mom"]
 
-[node name="Ltop" type="CollisionShape2D" parent="SB-Ltop"]
+[node name="SB-Ltop" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="Ltop" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB-Ltop"]
 position = Vector2( -255, -252 )
 scale = Vector2( 1, 2.8 )
 shape = SubResource( 7 )
 
-[node name="StaticBody2D" type="StaticBody2D" parent="SB-Ltop"]
+[node name="SB-Rtop" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
 
-[node name="SB-Rtop" type="StaticBody2D" parent="."]
-
-[node name="Rtop" type="CollisionShape2D" parent="SB-Rtop"]
+[node name="Rtop" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB-Rtop"]
 position = Vector2( 6, 180 )
 scale = Vector2( 0.996498, 1.95696 )
 shape = SubResource( 6 )
 
-[node name="SB-Lbottom" type="StaticBody2D" parent="."]
-position = Vector2( 1.42109e-14, -1 )
-scale = Vector2( 1.76207, 1.54005 )
+[node name="SB-Lbottom" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.49999 )
+scale = Vector2( 0.452423, 0.395418 )
 
-[node name="Lbottom" type="CollisionShape2D" parent="SB-Lbottom"]
+[node name="Lbottom" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB-Lbottom"]
 position = Vector2( -250.842, 3.89597 )
 scale = Vector2( 1, 1.3896 )
 shape = SubResource( 5 )
 
-[node name="SB-LeftW" type="StaticBody2D" parent="."]
-position = Vector2( 248, -37 )
-scale = Vector2( 3.89474, 3.89474 )
+[node name="SB-LeftW" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 127.094, 0.256756 )
 
-[node name="Left wing" type="CollisionShape2D" parent="SB-LeftW"]
+[node name="Left wing" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB-LeftW"]
 position = Vector2( -183.068, -0.770272 )
 scale = Vector2( 0.584196, 0.56567 )
 shape = SubResource( 3 )
 
-[node name="SB-RightW" type="StaticBody2D" parent="."]
-position = Vector2( 1.42109e-14, -1 )
-scale = Vector2( 1.76207, 1.54005 )
+[node name="SB-RightW" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.49999 )
+scale = Vector2( 0.452423, 0.395418 )
 
-[node name="Right Wing" type="CollisionShape2D" parent="SB-RightW"]
+[node name="Right Wing" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB-RightW"]
 position = Vector2( -17.593, -36.3624 )
 scale = Vector2( 1.0227, 1.42111 )
 shape = SubResource( 2 )
 
-[node name="SB-Rbottom" type="StaticBody2D" parent="."]
-position = Vector2( 1.42109e-14, -1 )
-scale = Vector2( 1.76207, 1.54005 )
+[node name="SB-Rbottom" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.49999 )
+scale = Vector2( 0.452423, 0.395418 )
 
-[node name="Rbottom" type="CollisionShape2D" parent="SB-Rbottom"]
+[node name="Rbottom" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB-Rbottom"]
 position = Vector2( -111.233, 1.94799 )
 scale = Vector2( 1, 1.2857 )
 shape = SubResource( 4 )
 
-[node name="SB H (1,1)" type="StaticBody2D" parent="."]
-position = Vector2( 0, 1 )
-scale = Vector2( 1.00193, 0.996303 )
+[node name="SB H (1,1)" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 10.0135 )
+scale = Vector2( 0.257252, 0.255807 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SB H (1,1)"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB H (1,1)"]
 position = Vector2( 5, -154 )
 scale = Vector2( 1.01374, 2.31771 )
 shape = SubResource( 8 )
 
-[node name="SB H (2,1)" type="StaticBody2D" parent="."]
+[node name="SB H (2,1)" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SB H (2,1)"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB H (2,1)"]
 position = Vector2( -8, 87 )
 scale = Vector2( 3.60535, 2.43045 )
 shape = SubResource( 9 )
 
-[node name="SB H (1,2)" type="StaticBody2D" parent="."]
-position = Vector2( 1, -1 )
+[node name="SB H (1,2)" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.6756, 9.49999 )
+scale = Vector2( 0.256757, 0.256757 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SB H (1,2)"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB H (1,2)"]
 position = Vector2( 65, -88 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="SB H (2,2)" type="StaticBody2D" parent="."]
+[node name="SB H (2,2)" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SB H (2,2)"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/SB H (2,2)"]
 position = Vector2( 249, -88 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="Most of horizontal" type="StaticBody2D" parent="."]
+[node name="Most of horizontal" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 123, -150 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 190, -151 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 377, -151 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 129, -339 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 313, -339 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 379, -339 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 437, -276 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 188, -276 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 253, -276 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 250, -214 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 317, -214 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Most of horizontal"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Most of horizontal"]
 position = Vector2( 378, -214 )
 scale = Vector2( 1.15026, 2.6078 )
 shape = SubResource( 10 )
 
-[node name="Vertical" type="StaticBody2D" parent="."]
+[node name="Vertical" type="Area2D" parent="Tmaze2 mom/mom collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 328, -8 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 232, -10 )
 scale = Vector2( 2.36443, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 266, -68 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 390, -75 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 390, -134 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 452, -133 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 327, -133 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 327, -196 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 203, -76 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 203, -138 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 202, -205 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 203, -255 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 141, -203 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 141, -263 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Vertical"]
-position = Vector2( 141, -321 )
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
+position = Vector2( 140, -321 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 265, -329 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 265, -382 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 390, -262 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
 
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Vertical"]
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/Vertical"]
 position = Vector2( 390, -321 )
 scale = Vector2( 2.52, 1.04 )
 shape = SubResource( 11 )
+
+[node name="Tmaze2 dad" type="Sprite" parent="."]
+position = Vector2( -270, -38 )
+scale = Vector2( 3.89474, 3.89474 )
+texture = ExtResource( 3 )
+
+[node name="dad collision" type="Node2D" parent="Tmaze2 dad"]
+
+[node name="SB-Ltop" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="Ltop" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB-Ltop"]
+position = Vector2( -255, -252 )
+scale = Vector2( 1, 2.8 )
+shape = SubResource( 7 )
+
+[node name="SB-Rtop" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="Rtop" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB-Rtop"]
+position = Vector2( 6, 180 )
+scale = Vector2( 0.996498, 1.95696 )
+shape = SubResource( 6 )
+
+[node name="SB-Lbottom" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.49999 )
+scale = Vector2( 0.452423, 0.395418 )
+
+[node name="Lbottom" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB-Lbottom"]
+position = Vector2( -250.842, 3.89597 )
+scale = Vector2( 1, 1.3896 )
+shape = SubResource( 5 )
+
+[node name="SB-LeftW" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 127.094, 0.256756 )
+
+[node name="Left wing" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB-LeftW"]
+position = Vector2( -183.068, -0.770272 )
+scale = Vector2( 0.584196, 0.56567 )
+shape = SubResource( 3 )
+
+[node name="SB-RightW" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.49999 )
+scale = Vector2( 0.452423, 0.395418 )
+
+[node name="Right Wing" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB-RightW"]
+position = Vector2( -17.593, -36.3624 )
+scale = Vector2( 1.0227, 1.42111 )
+shape = SubResource( 2 )
+
+[node name="SB-Rbottom" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.49999 )
+scale = Vector2( 0.452423, 0.395418 )
+
+[node name="Rbottom" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB-Rbottom"]
+position = Vector2( -111.233, 1.94799 )
+scale = Vector2( 1, 1.2857 )
+shape = SubResource( 4 )
+
+[node name="SB H (1,1)" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 10.0135 )
+scale = Vector2( 0.257252, 0.255807 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB H (1,1)"]
+position = Vector2( 5, -154 )
+scale = Vector2( 1.01374, 2.31771 )
+shape = SubResource( 8 )
+
+[node name="SB H (2,1)" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB H (2,1)"]
+position = Vector2( -8, 87 )
+scale = Vector2( 3.60535, 2.43045 )
+shape = SubResource( 9 )
+
+[node name="SB H (1,2)" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.6756, 9.49999 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB H (1,2)"]
+position = Vector2( 65, -88 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="SB H (2,2)" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/SB H (2,2)"]
+position = Vector2( 249, -88 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="Most of horizontal" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 123, -150 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 190, -151 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 377, -151 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 129, -339 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 313, -339 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 379, -339 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 437, -276 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 188, -276 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 253, -276 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 250, -214 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 317, -214 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Most of horizontal"]
+position = Vector2( 378, -214 )
+scale = Vector2( 1.15026, 2.6078 )
+shape = SubResource( 10 )
+
+[node name="Vertical" type="Area2D" parent="Tmaze2 dad/dad collision"]
+position = Vector2( 63.4189, 9.75675 )
+scale = Vector2( 0.256757, 0.256757 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 328, -8 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 232, -10 )
+scale = Vector2( 2.36443, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 266, -68 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 390, -75 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 390, -134 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 452, -133 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 327, -133 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 327, -196 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 203, -76 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 203, -138 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 202, -205 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 203, -255 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 141, -203 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 141, -263 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 140, -321 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 265, -329 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 265, -382 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 390, -262 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( 390, -321 )
+scale = Vector2( 2.52, 1.04 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( -276, 294.999 )
+scale = Vector2( 1.2827, -4.42946 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+position = Vector2( -0.000137329, -7.62938e-06 )
+scale = Vector2( 0.999998, 0.999998 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+shape = SubResource( 16 )
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Tmaze2 dad/dad collision/Vertical"]
+shape = SubResource( 17 )
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2( 1.04304, 1.16746 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 3.19302, -8.0545 )
+scale = Vector2( 4.72082, -2.20141 )
+shape = SubResource( 18 )
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+visible = false
+scale = Vector2( 0.0984411, 0.126091 )
+texture = ExtResource( 4 )
+
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Ltop" to="LobbyPlayer2" method="_on_SBLtop_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Rtop" to="LobbyPlayer2" method="_on_SBRtop_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Lbottom" to="LobbyPlayer2" method="_on_SBLbottom_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-LeftW" to="LobbyPlayer2" method="_on_SBLeftW_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-RightW" to="LobbyPlayer2" method="_on_SBRightW_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Rbottom" to="LobbyPlayer2" method="_on_SBRbottom_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (1,1)" to="LobbyPlayer2" method="_on_SB_H_11_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (2,1)" to="LobbyPlayer2" method="_on_SB_H_21_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (1,2)" to="LobbyPlayer2" method="_on_SB_H_12_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/SB H (2,2)" to="LobbyPlayer2" method="_on_SB_H_22_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/Most of horizontal" to="LobbyPlayer2" method="_on_Most_of_horizontal_body_entered"]
+[connection signal="body_entered" from="Tmaze2 mom/mom collision/Vertical" to="LobbyPlayer2" method="_on_Vertical_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-Ltop" to="LobbyPlayer" method="_on_SBLtop_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-Rtop" to="LobbyPlayer" method="_on_SBRtop_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-Lbottom" to="LobbyPlayer" method="_on_SBLbottom_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-LeftW" to="LobbyPlayer" method="_on_SBLeftW_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-RightW" to="LobbyPlayer" method="_on_SBRightW_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB-Rbottom" to="LobbyPlayer" method="_on_SBRbottom_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB H (1,1)" to="LobbyPlayer" method="_on_SB_H_11_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB H (2,1)" to="LobbyPlayer" method="_on_SB_H_21_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB H (1,2)" to="LobbyPlayer" method="_on_SB_H_12_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/SB H (2,2)" to="LobbyPlayer" method="_on_SB_H_22_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/Most of horizontal" to="LobbyPlayer" method="_on_Most_of_horizontal_body_entered"]
+[connection signal="body_entered" from="Tmaze2 dad/dad collision/Vertical" to="LobbyPlayer" method="_on_Vertical_body_entered"]
+[connection signal="body_entered" from="Area2D" to="LobbyPlayer" method="_on_Area2D_body_entered"]

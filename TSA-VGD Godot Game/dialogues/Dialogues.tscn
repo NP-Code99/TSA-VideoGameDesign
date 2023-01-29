@@ -10,7 +10,7 @@ d_file = "res://dialogues/json/guide_chat.json"
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 margin_left = 72.0
 margin_top = 33.0
-margin_right = 887.0
+margin_right = 444.0
 margin_bottom = 174.0
 texture = ExtResource( 1 )
 patch_margin_left = 4
@@ -30,9 +30,9 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Name:"
 
 [node name="Chat" type="RichTextLabel" parent="NinePatchRect"]
-margin_left = 65.0
+margin_left = 37.0
 margin_top = 39.0
-margin_right = 514.0
+margin_right = 316.0
 margin_bottom = 129.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Chatting"
