@@ -8,8 +8,17 @@ export var maximum_jumps := 2
 export var double_jump_strength := 1200.0 
 export var gravity := 4500.0 
 
+export var stomp_impulse: = 1000.0
+
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
+
+func _on_EnemyDetector_area_entered(area):
+	_velocity.y = -jump_strength
+
+func _on_EnemyDetector_body_entered(body):
+	queue_free()
+
 
 func _physics_process(_delta: float) -> void:
 	var _horizontal_direction = (
@@ -43,9 +52,15 @@ func _physics_process(_delta: float) -> void:
 		get_node(".").position.y = 0
 		
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
+
 	
 
 
 	
+
+
+
+
+
 
 
