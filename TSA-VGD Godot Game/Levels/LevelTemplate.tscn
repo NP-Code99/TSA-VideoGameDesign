@@ -29,7 +29,7 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 } ]
 0/z_index = 0
 
-[node name="LevelTemplate" type="Node2D"]
+[node name="Minigame3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )
@@ -41,4 +41,4 @@ tile_data = PoolIntArray( -327696, -2147483648, 0, -327695, -2147483648, 0, -262
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 259, 353 )
-speed = Vector2( 800, 1400 )
+speed = 600.0
