@@ -55,12 +55,7 @@ func _physics_process(_delta: float) -> void:
 
 	
 
-
-	
-
-
-
-
-
-
-
+func _on_DeadZone_body_entered(body: Node) -> void:
+	if body.name == "Player":
+		get_node(".").position.x = 302
+		get_node(".").position.y = 313

@@ -8,5 +8,4 @@ func use_dialogue():
 
 
 func _on_Area2D_body_entered(body: Node) -> void:
-	if body.name == "Sullivan" or body.name == "Stephanie":
-		use_dialogue()
+	use_dialogue()
