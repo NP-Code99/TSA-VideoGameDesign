@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Camera2DScript.gd" type="Script" id=1]
-[ext_resource path="res://Mingame2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://dialogues/Minigame2SplitScreenScript.gd" type="Script" id=3]
+[ext_resource path="res://Minigame2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Minigame2SplitScreenScript.gd" type="Script" id=3]
 
 [node name="Minigame2SplitScreen" type="Node"]
 script = ExtResource( 3 )

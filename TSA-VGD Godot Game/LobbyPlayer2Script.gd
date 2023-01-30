@@ -90,3 +90,8 @@ func _on_Most_of_horizontal_body_entered(body: Node) -> void:
 func _on_Vertical_body_entered(body: Node) -> void:
 	if body.name == "LobbyPlayer2" || body.name == "Player2":
 		body.position = Vector2(270, 201)
+
+
+func _on_borders_body_entered(body: Node) -> void:
+	if body.name == "LobbyPlayer2" || body.name == "Player2":
+		body.position = Vector2(270, 201)
