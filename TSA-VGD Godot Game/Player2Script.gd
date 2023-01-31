@@ -7,9 +7,11 @@ export var jump_strength := 1500.0
 export var maximum_jumps := 2 
 export var double_jump_strength := 1200.0 
 export var gravity := 4500.0 
+onready var animatedSprite = $AnimatedSprite
 
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
+
 
 func _physics_process(_delta: float) -> void:
 	var _horizontal_direction = (
@@ -38,10 +40,17 @@ func _physics_process(_delta: float) -> void:
 	elif is_idling or is_running:
 		_jumps_made = 0
 	
-	if Input.is_action_pressed("key_respawn2"):
-		get_node(".").position.x = -200
+	if Input.is_action_pressed("key_respawn1"):
+		get_node(".").position.x = 0
 		get_node(".").position.y = 0
 		
+	if Input.is_action_pressed("arrow_left"):
+		animatedSprite.animation = "WalkLeft"
+	elif Input.is_action_pressed("arrow_right"):
+		animatedSprite.animation = "WalkRight"
+	else:
+		animatedSprite.animation = "Idle"
+
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	
 	

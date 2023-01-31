@@ -6,7 +6,7 @@ radius = 28.1603
 [sub_resource type="CircleShape2D" id=2]
 radius = 29.2746
 
-[node name="Checkpoint2Collision" type="Area2D"]
+[node name="Checkpoint3Collision" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )

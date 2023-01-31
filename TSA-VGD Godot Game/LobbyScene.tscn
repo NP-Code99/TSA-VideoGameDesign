@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://assets/Texture/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://LobbyPlayer.tscn" type="PackedScene" id=2]
@@ -10,12 +10,14 @@
 [ext_resource path="res://Checkpoint Collisions/Checkpoint1Collision.tscn" type="PackedScene" id=8]
 [ext_resource path="res://assets/SERENE_VILLAGE_REVAMPED/Serene_Village_48x48.png" type="Texture" id=9]
 [ext_resource path="res://assets/SERENE_VILLAGE_REVAMPED/Serene_Village_32x32.png" type="Texture" id=10]
-[ext_resource path="res://Checkpoint Collisions/Checkpoint2Collision.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Checkpoint Collisions/Checkpoint3Collision.tscn" type="PackedScene" id=11]
 [ext_resource path="res://dialogues/guide_npc.tscn" type="PackedScene" id=12]
 [ext_resource path="res://lobby_music.tscn" type="PackedScene" id=13]
 [ext_resource path="res://LobbySceneScript.gd" type="Script" id=14]
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=15]
 [ext_resource path="res://assets/signposts/pngs/mid_tone_with_writing.png" type="Texture" id=16]
+[ext_resource path="res://Checkpoint2Collision.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Minigame1SplitScreen.tscn" type="PackedScene" id=19]
 
 [sub_resource type="TileSet" id=1]
 0/name = "TX Tileset Grass.png 0"
@@ -1825,11 +1827,18 @@ position = Vector2( 21, -17 )
 
 [node name="Checkpoint1Collision" parent="." instance=ExtResource( 8 )]
 position = Vector2( -2000, -175 )
+transitionGameScene = ExtResource( 19 )
 
-[node name="Checkpoint2Collision" parent="." instance=ExtResource( 11 )]
+[node name="Checkpoint2Collision" parent="." instance=ExtResource( 17 )]
+position = Vector2( 2575, -175 )
+
+[node name="Checkpoint3Collision" parent="." instance=ExtResource( 11 )]
 position = Vector2( -1008, -1651 )
 
 [node name="guide_npc" parent="." instance=ExtResource( 12 )]
 position = Vector2( -8, -81 )
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 13 )]
+
+[connection signal="body_entered" from="Checkpoint2Collision" to="Checkpoint2Collision" method="_on_Checkpoint2Collision_body_entered"]
+[connection signal="body_exited" from="Checkpoint2Collision" to="Checkpoint2Collision" method="_on_Checkpoint2Collision_body_exited"]

@@ -7,9 +7,11 @@ export var jump_strength := 1500.0
 export var maximum_jumps := 2 
 export var double_jump_strength := 1200.0 
 export var gravity := 4500.0 
+onready var animatedSprite = $AnimatedSprite
 
 var _jumps_made := 0
 var _velocity := Vector2.ZERO
+
 
 func _physics_process(_delta: float) -> void:
 	var _horizontal_direction = (
@@ -42,6 +44,13 @@ func _physics_process(_delta: float) -> void:
 		get_node(".").position.x = 0
 		get_node(".").position.y = 0
 		
+	if Input.is_action_pressed("move_left"):
+		animatedSprite.animation = "WalkLeft"
+	elif Input.is_action_pressed("move_right"):
+		animatedSprite.animation = "WalkRight"
+	else:
+		animatedSprite.animation = "Idle"
+
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	
 	
@@ -51,3 +60,8 @@ func _on_DeadZone_body_entered(body: Node) -> void:
 	if body.name == "Player" || body.name == "Player2":
 		yield(get_tree().create_timer(.5), "timeout")
 		body.position = Vector2(0, 0) # set the player's position to the desired respawn point
+
+
+func _on_Confetti_body_entered(body: Node) -> void:
+	if body.name == "Player" || body.name == "Player2":
+		TransitionScene.change_scene("res://LobbySplitScreen.tscn")

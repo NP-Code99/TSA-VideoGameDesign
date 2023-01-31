@@ -16,6 +16,11 @@
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ), ExtResource( 13 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "WalkBack",
@@ -24,11 +29,6 @@ animations = [ {
 "frames": [ ExtResource( 5 ), ExtResource( 6 ), ExtResource( 9 ) ],
 "loop": true,
 "name": "WalkFront",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 1 ) ],

@@ -75,6 +75,11 @@ extents = Vector2( 5.74915, 15.0529 )
 
 [node name="Node2D" type="Node2D"]
 
+[node name="pink backround" type="Sprite" parent="."]
+position = Vector2( 36.9999, -63 )
+scale = Vector2( 0.29232, 0.25491 )
+texture = ExtResource( 5 )
+
 [node name="LobbyPlayer" parent="." instance=ExtResource( 2 )]
 position = Vector2( -246, 210 )
 scale = Vector2( 0.7, 0.7 )
@@ -83,7 +88,7 @@ z_index = 4
 [node name="Camera2D" type="Camera2D" parent="LobbyPlayer"]
 scale = Vector2( -0.326016, 0.618108 )
 current = true
-zoom = Vector2( 0.5, 0.5 )
+zoom = Vector2( 0.6, 0.6 )
 smoothing_enabled = true
 smoothing_speed = 3.0
 
@@ -378,11 +383,6 @@ shape = SubResource( 19 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Tmaze2 mom/mom collision/borders"]
 position = Vector2( 56.2297, 54.6891 )
 shape = SubResource( 19 )
-
-[node name="pink backround" type="Sprite" parent="Tmaze2 mom"]
-position = Vector2( -59.8243, -6.41891 )
-scale = Vector2( 0.075055, 0.0654498 )
-texture = ExtResource( 5 )
 
 [node name="Tmaze2 dad" type="Sprite" parent="."]
 position = Vector2( -270, -38 )
@@ -680,15 +680,15 @@ shape = SubResource( 17 )
 position = Vector2( 479.999, 3.99998 )
 shape = SubResource( 17 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Pinata" type="Area2D" parent="."]
 scale = Vector2( 1.04304, 1.16746 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinata"]
 position = Vector2( 3.19302, -8.0545 )
 scale = Vector2( 4.72082, -2.20141 )
 shape = SubResource( 18 )
 
-[node name="Sprite" type="Sprite" parent="Area2D"]
+[node name="Sprite" type="Sprite" parent="Pinata"]
 visible = false
 scale = Vector2( 0.0984411, 0.126091 )
 texture = ExtResource( 3 )
@@ -718,4 +718,4 @@ texture = ExtResource( 3 )
 [connection signal="body_entered" from="Tmaze2 dad/dad collision/SB H (2,2)" to="LobbyPlayer" method="_on_SB_H_22_body_entered"]
 [connection signal="body_entered" from="Tmaze2 dad/dad collision/Most of horizontal" to="LobbyPlayer" method="_on_Most_of_horizontal_body_entered"]
 [connection signal="body_entered" from="Tmaze2 dad/dad collision/Vertical" to="LobbyPlayer" method="_on_Vertical_body_entered"]
-[connection signal="body_entered" from="Area2D" to="LobbyPlayer" method="_on_Area2D_body_entered"]
+[connection signal="body_entered" from="Pinata" to="LobbyPlayer" method="_on_Area2D_body_entered"]
