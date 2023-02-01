@@ -41,9 +41,6 @@ margin_right = 3259.0
 margin_bottom = 932.0
 texture = ExtResource( 4 )
 expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 2 )

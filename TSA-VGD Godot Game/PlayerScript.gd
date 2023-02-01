@@ -58,7 +58,7 @@ func _physics_process(_delta: float) -> void:
 
 func _on_DeadZone_body_entered(body: Node) -> void:
 	if body.name == "Player" || body.name == "Player2":
-		yield(get_tree().create_timer(.5), "timeout")
+#		yield(get_tree().create_timer(.125), "timeout")
 		body.position = Vector2(0, 0) # set the player's position to the desired respawn point
 
 
