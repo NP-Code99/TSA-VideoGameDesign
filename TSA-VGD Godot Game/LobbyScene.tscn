@@ -1815,7 +1815,7 @@ position = Vector2( -1586, -79 )
 input_pickable = true
 
 [node name="Sullivan" parent="." instance=ExtResource( 2 )]
-position = Vector2( 116, -19 )
+position = Vector2( 118, -19 )
 
 [node name="Camera2D" type="Camera2D" parent="Sullivan"]
 current = true

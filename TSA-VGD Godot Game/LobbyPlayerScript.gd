@@ -8,26 +8,26 @@ onready var animatedSprite = $AnimatedSprite
 func read_input():
 	velocity = Vector2()
 	if Input.is_action_pressed("move_up"):
-		velocity.y -= 1
+		velocity.y -= 5
 		direction = Vector2(0, -1)
 		animatedSprite.animation = "WalkBack";
 	elif Input.is_action_pressed("move_down"):
-		velocity.y += 1 
+		velocity.y += 5 
 		direction = Vector2(0, 1) 
 		animatedSprite.animation = "WalkFront";
 	elif Input.is_action_pressed("move_left"):
-		velocity.x -= 1
+		velocity.x -= 5
 		direction = Vector2(-1, 0)
 		animatedSprite.animation = "WalkLeft";
 	elif Input.is_action_pressed("move_right"):
-		velocity.x += 1
+		velocity.x += 5
 		direction = Vector2(1, 0)
 		animatedSprite.animation = "WalkRight";
 	else:
 		animatedSprite.animation ="idle"
 	
 	velocity = velocity.normalized()
-	velocity = move_and_slide(velocity * 150)
+	velocity = move_and_slide(velocity * 300)
 	
 func _physics_process(delta):
 	read_input()
