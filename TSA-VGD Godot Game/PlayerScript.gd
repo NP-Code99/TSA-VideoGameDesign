@@ -53,7 +53,6 @@ func _physics_process(_delta: float) -> void:
 
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	
-	
 
 
 func _on_DeadZone_body_entered(body: Node) -> void:
@@ -64,4 +63,6 @@ func _on_DeadZone_body_entered(body: Node) -> void:
 
 func _on_Confetti_body_entered(body: Node) -> void:
 	if body.name == "Player" || body.name == "Player2":
+		MinigameCounter.count()
+		print(MinigameCounter.count)
 		TransitionScene.change_scene("res://LobbySplitScreen.tscn")

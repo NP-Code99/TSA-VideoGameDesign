@@ -28,6 +28,7 @@ config/icon="res://icon.png"
 
 GameManager="*res://GameManager.gd"
 TransitionScene="*res://TransitionScene.tscn"
+MinigameCounter="*res://MinigameCounter.gd"
 
 [display]
 
