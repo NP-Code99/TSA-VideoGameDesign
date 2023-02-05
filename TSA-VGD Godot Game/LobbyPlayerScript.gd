@@ -147,4 +147,8 @@ func _on_Vertical_body_entered(body):
 
 func _on_Area2D_body_entered(body):
 	if body.name == "LobbyPlayer" || body.name == "LobbyPlayer2":
-		TransitionScene.change_scene("res://LobbySplitScreen.tscn")# set the player's position to the desired respawn
+		MinigameCounter.count()
+		if MinigameCounter.minigamesFinished == 4:
+			TransitionScene.change_scene("res://PartyScene.tscn")
+		else:
+			TransitionScene.change_scene("res://LobbySplitScreen.tscn") 

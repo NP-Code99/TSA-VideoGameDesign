@@ -64,5 +64,8 @@ func _on_DeadZone_body_entered(body: Node) -> void:
 func _on_Confetti_body_entered(body: Node) -> void:
 	if body.name == "Player" || body.name == "Player2":
 		MinigameCounter.count()
-		print(MinigameCounter.count)
-		TransitionScene.change_scene("res://LobbySplitScreen.tscn")
+		
+		if MinigameCounter.minigamesFinished == 4:
+			TransitionScene.change_scene("res://PartyScene.tscn")
+		else:
+			TransitionScene.change_scene("res://LobbySplitScreen.tscn")

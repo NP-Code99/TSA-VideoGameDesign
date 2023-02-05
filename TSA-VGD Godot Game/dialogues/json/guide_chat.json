@@ -1,9 +1,10 @@
 [	
 	{"name": "Guide", "text": "Welcome to Party Mania!"},
-	{"name": "Guide", "text": "In this two-playered game, you'll be controlling Sullivan (father) and Stephanie (mother)."},
+	{"name": "Guide", "text": "In this two-playered game, one player will control Sullivan (father) and another player will control Stephanie (mother)."},
+	{"name": "Guide", "text": "Use WASD keys to control Sullivan and Arrow Keys to control Stephanie"},
 	{"name": "Guide", "text": "You'll be tasked to obtain all of the needed items for your son's upcoming party."},
-	{"name": "Guide", "text": "In order to obtain these items, you'll have to complete 6 minigames."},
+	{"name": "Guide", "text": "In order to obtain these items, you'll have to complete 4 minigames."},
 	{"name": "Guide", "text": "Around the neighborhood, we've hidden portals to each of the minigames."},
-	{"name": "Guide", "text": "**Hint**Hint** Follow the paths to find the minigames."},
+	{"name": "Guide", "text": "**Hint** **Hint** Follow the pathways and signs to find the minigames."},
 	{"name": "Guide", "text": "Good Luck, and remember to have fun!"}
 ]
