@@ -16,11 +16,6 @@
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 12 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 10 ), ExtResource( 1 ), ExtResource( 10 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "WalkBack",
@@ -40,6 +35,11 @@ animations = [ {
 "loop": true,
 "name": "WalkRight",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=8]
@@ -56,7 +56,6 @@ script = ExtResource( 2 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 9 )
 animation = "WalkLeft"
-frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
