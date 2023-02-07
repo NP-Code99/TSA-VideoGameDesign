@@ -1,7 +1,8 @@
 extends Node2D
 
-
+var minigamesFinished = 0; 
 
 func count():
-	
-	pass
+	minigamesFinished += 1
+
+
