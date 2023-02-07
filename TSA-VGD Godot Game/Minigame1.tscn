@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://jizz2/LLateral2.png" type="Texture" id=1]
 [ext_resource path="res://WorldTileSet.tres" type="TileSet" id=2]
@@ -17,13 +17,13 @@
 [ext_resource path="res://assets/Tiles/cakeHalfMid.png" type="Texture" id=15]
 [ext_resource path="res://assets/Tiles/canePink.png" type="Texture" id=16]
 [ext_resource path="res://candy background.webp" type="Texture" id=17]
-[ext_resource path="res://dad LLateral 2.png" type="Texture" id=18]
-[ext_resource path="res://dad LLateral 0.png" type="Texture" id=19]
-[ext_resource path="res://dad RLateral 2.png" type="Texture" id=20]
-[ext_resource path="res://dad anterior 0.png" type="Texture" id=21]
-[ext_resource path="res://dad LLateral 1.png" type="Texture" id=22]
-[ext_resource path="res://dad RLateral 0.png" type="Texture" id=23]
-[ext_resource path="res://dad RLateral 1.png" type="Texture" id=24]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.25_PM-removebg-preview.png" type="Texture" id=18]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.15_PM-removebg-preview.png" type="Texture" id=19]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.49_PM-removebg-preview.png" type="Texture" id=20]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.34_PM-removebg-preview.png" type="Texture" id=21]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.15_PM-removebg-preview.png" type="Texture" id=22]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.11_PM-removebg-preview.png" type="Texture" id=23]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.59_PM-removebg-preview.png" type="Texture" id=24]
 [ext_resource path="res://jizz2/LLateral 0.png" type="Texture" id=25]
 [ext_resource path="res://jizz2/LLateral1.png" type="Texture" id=26]
 [ext_resource path="res://jizz2/RLateral2.png" type="Texture" id=27]
@@ -32,6 +32,11 @@
 [ext_resource path="res://jizz2/RLateral 0.png" type="Texture" id=30]
 [ext_resource path="res://icon.png" type="Texture" id=31]
 [ext_resource path="res://MinigameCounter.gd" type="Script" id=32]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.43_PM-removebg-preview.png" type="Texture" id=33]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.20_PM-removebg-preview.png" type="Texture" id=34]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=35]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.39_PM-removebg-preview.png" type="Texture" id=36]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.55_PM-removebg-preview.png" type="Texture" id=37]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 70, 0, 70, 39, 0, 39 )
@@ -328,22 +333,27 @@ extents = Vector2( 59.4688, 41.75 )
 
 [sub_resource type="SpriteFrames" id=16]
 animations = [ {
-"frames": [  ],
+"frames": [ ExtResource( 34 ), ExtResource( 19 ), ExtResource( 34 ), ExtResource( 18 ) ],
 "loop": true,
-"name": "Jump",
+"name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 19 ), ExtResource( 22 ), ExtResource( 19 ), ExtResource( 18 ) ],
+"frames": [ ExtResource( 37 ), ExtResource( 20 ), ExtResource( 37 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "WalkFront",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 21 ), ExtResource( 36 ), ExtResource( 33 ) ],
 "loop": true,
 "name": "WalkLeft",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 24 ), ExtResource( 23 ), ExtResource( 20 ) ],
+"frames": [ ExtResource( 22 ), ExtResource( 23 ), ExtResource( 22 ), ExtResource( 35 ) ],
 "loop": true,
 "name": "WalkRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 21 ) ],
+"frames": [ ExtResource( 37 ) ],
 "loop": true,
 "name": "Idle",
 "speed": 5.0
@@ -379,6 +389,7 @@ height = 0.0
 extents = Vector2( 31.625, 30.5 )
 
 [node name="Node2D2" type="Node2D"]
+position = Vector2( -276, 73 )
 script = ExtResource( 32 )
 
 [node name="CandyBackground" type="Sprite" parent="."]
@@ -403,38 +414,31 @@ tile_data = PoolIntArray( -196681, 3, 0, -262077, 3, 0, 65463, 8, 0, 67, 8, 0, 5
 [node name="Fcc66B707550E2f" type="Sprite" parent="."]
 position = Vector2( 48, 1142 )
 scale = Vector2( 0.239844, 0.292627 )
-texture = ExtResource( 32 )
 offset = Vector2( -443.094, -107.049 )
 
 [node name="Fcc66B707550E2f2" type="Sprite" parent="."]
 position = Vector2( -761, 2017 )
 scale = Vector2( 0.298148, 0.332353 )
-texture = ExtResource( 32 )
 
 [node name="Fcc66B707550E2f3" type="Sprite" parent="."]
 position = Vector2( 3, 2048 )
 scale = Vector2( 0.298148, 0.332353 )
-texture = ExtResource( 32 )
 
 [node name="Fcc66B707550E2f4" type="Sprite" parent="."]
 position = Vector2( -704, 3678 )
 scale = Vector2( 0.298148, 0.332353 )
-texture = ExtResource( 32 )
 
 [node name="Fcc66B707550E2f5" type="Sprite" parent="."]
 position = Vector2( -704, 4507 )
 scale = Vector2( 0.298148, 0.332353 )
-texture = ExtResource( 32 )
 
 [node name="Fcc66B707550E2f6" type="Sprite" parent="."]
 position = Vector2( -2244, 5595 )
 scale = Vector2( 0.298148, 0.332353 )
-texture = ExtResource( 32 )
 
 [node name="Fcc66B707550E2f7" type="Sprite" parent="."]
 position = Vector2( 1469, 6121 )
 scale = Vector2( 0.298148, 0.332353 )
-texture = ExtResource( 32 )
 
 [node name="DeadZones" type="Area2D" parent="."]
 position = Vector2( -64.875, 1075 )
@@ -482,9 +486,10 @@ speed = 550.0
 jump_strength = 1450.0
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Player"]
-scale = Vector2( 1.09, 1.09 )
+scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 16 )
-animation = "Jump"
+animation = "WalkBack"
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]

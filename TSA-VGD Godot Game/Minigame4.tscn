@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://assets/Tiles/chocoHillRight2.png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/chocoHillRight.png" type="Texture" id=2]
@@ -24,6 +24,18 @@
 [ext_resource path="res://assets/Tiles/creamChoco.png" type="Texture" id=22]
 [ext_resource path="res://assets/Tiles/lollipopBaseBrown.png" type="Texture" id=23]
 [ext_resource path="res://2560x1440-pastel-brown-solid-color-background.png" type="Texture" id=24]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.25_PM-removebg-preview.png" type="Texture" id=25]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.15_PM-removebg-preview.png" type="Texture" id=26]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.49_PM-removebg-preview.png" type="Texture" id=27]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.34_PM-removebg-preview.png" type="Texture" id=28]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.15_PM-removebg-preview.png" type="Texture" id=29]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.11_PM-removebg-preview.png" type="Texture" id=30]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.59_PM-removebg-preview.png" type="Texture" id=31]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.43_PM-removebg-preview.png" type="Texture" id=32]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.20_PM-removebg-preview.png" type="Texture" id=33]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=34]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.39_PM-removebg-preview.png" type="Texture" id=35]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.55_PM-removebg-preview.png" type="Texture" id=36]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
@@ -653,6 +665,34 @@ points = PoolVector2Array( 70, 0, 70, 20, 60, 70, 10, 70, 0, 20, 0, 0, 0, 0 )
 } ]
 3/z_index = 0
 
+[sub_resource type="SpriteFrames" id=30]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 26 ), ExtResource( 33 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "WalkBack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 27 ), ExtResource( 36 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "WalkFront",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 28 ), ExtResource( 35 ), ExtResource( 32 ) ],
+"loop": true,
+"name": "WalkLeft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 34 ) ],
+"loop": true,
+"name": "WalkRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 33602, 1009.5 )
 
@@ -678,6 +718,13 @@ tile_data = PoolIntArray( -5111841, 2, 0, -5111835, 2, 0, -5046305, 3, 0, -50462
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 302, 313 )
 scale = Vector2( 0.6, 0.6 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Player"]
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 30 )
+animation = "WalkFront"
+frame = 2
+playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
