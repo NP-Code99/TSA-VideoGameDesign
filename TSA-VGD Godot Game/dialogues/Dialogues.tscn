@@ -20,6 +20,7 @@ script = ExtResource( 2 )
 d_file = "res://dialogues/json/guide_chat.json"
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
+visible = false
 margin_left = 72.0
 margin_top = 33.0
 margin_right = 444.0
