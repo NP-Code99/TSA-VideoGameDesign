@@ -13,7 +13,7 @@ func _on_Checkpoint4Collision_body_entered(body: Node) -> void:
 	
 	if player1_times == 1 and player2_times == 1: 
 		yield(get_tree().create_timer(1), "timeout")
-		TransitionScene.change_scene(transitionGameScene.resource_path)
+		TransitionScene.change_scene("res://Minigame4SplitScreen.tscn")
 
 func _on_Checkpoint4Collision_body_exited(body: Node) -> void:
 	if body.name == "Sullivan":

@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 const UP_DIRECTION := Vector2.UP
 
-export var speed := 800.0 
-export var jump_strength := 2000.0
+export var speed := 600.0 
+export var jump_strength := 1700.0
 export var maximum_jumps := 2 
 export var double_jump_strength := 1200.0 
 export var gravity := 4500.0 
@@ -63,6 +63,15 @@ func _physics_process(_delta: float) -> void:
 	
 
 func _on_DeadZone_body_entered(body: Node) -> void:
-	if body.name == "Player":
+	if body.name == "PlayerGame4":
 		get_node(".").position.x = 302
 		get_node(".").position.y = 313
+
+
+func _on_cake_body_entered(body: Node) -> void:
+	if body.name == "PlayerGame4" or body.name == "Player2Game4":
+		MinigameCounter.count()
+		if MinigameCounter.minigamesFinished == 4:
+			TransitionScene.change_scene("res://PartyScene.tscn")
+		else:
+			TransitionScene.change_scene("res://LobbySplitScreen.tscn") 

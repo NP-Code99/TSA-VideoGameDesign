@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 const UP_DIRECTION := Vector2.UP
 
-export var speed := 800.0 
-export var jump_strength := 2000.0
+export var speed := 600.0 
+export var jump_strength := 1700.0
 export var maximum_jumps := 2 
 export var double_jump_strength := 1200.0 
 export var gravity := 4500.0 
@@ -53,5 +53,7 @@ func _physics_process(_delta: float) -> void:
 
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	
-	
-
+func _on_DeadZone_body_entered(body: Node) -> void:
+	if body.name == "Player2Game4":
+		get_node(".").position.x = 402
+		get_node(".").position.y = 313
