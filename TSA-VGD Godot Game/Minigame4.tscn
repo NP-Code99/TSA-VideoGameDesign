@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://assets/Tiles/chocoHillRight2.png" type="Texture" id=1]
 [ext_resource path="res://assets/Tiles/chocoHillRight.png" type="Texture" id=2]
@@ -36,6 +36,14 @@
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=34]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.39_PM-removebg-preview.png" type="Texture" id=35]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.55_PM-removebg-preview.png" type="Texture" id=36]
+[ext_resource path="res://Player2Script.gd" type="Script" id=37]
+[ext_resource path="res://jizz2/LLateral 0.png" type="Texture" id=38]
+[ext_resource path="res://jizz2/RLateral 0.png" type="Texture" id=39]
+[ext_resource path="res://jizz2/LLateral1.png" type="Texture" id=40]
+[ext_resource path="res://jizz2/LLateral2.png" type="Texture" id=41]
+[ext_resource path="res://jizz2/mom Anterior 0.png" type="Texture" id=42]
+[ext_resource path="res://jizz2/RLateral2.png" type="Texture" id=43]
+[ext_resource path="res://jizz2/RLateral1.png" type="Texture" id=44]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 70, 0, 70, 70, 0, 70 )
@@ -696,10 +704,31 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=24]
 extents = Vector2( 33602, 1009.5 )
 
+[sub_resource type="SpriteFrames" id=31]
+animations = [ {
+"frames": [ ExtResource( 42 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 38 ), ExtResource( 40 ), ExtResource( 38 ), ExtResource( 41 ) ],
+"loop": true,
+"name": "WalkLeft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 39 ), ExtResource( 44 ), ExtResource( 39 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "WalkRight",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=32]
+radius = 39.0
+
 [node name="Node2D" type="Node2D"]
 
 [node name="2560X1440-pastel-brown-solid-color-background" type="Sprite" parent="."]
-position = Vector2( 4532.25, -2459.75 )
+position = Vector2( 4269, -2568 )
 scale = Vector2( 6.67871, 8.42604 )
 texture = ExtResource( 24 )
 
@@ -715,22 +744,21 @@ tile_set = SubResource( 29 )
 format = 1
 tile_data = PoolIntArray( -5111841, 2, 0, -5111835, 2, 0, -5046305, 3, 0, -5046299, 3, 0 )
 
-[node name="Player" parent="." instance=ExtResource( 5 )]
+[node name="PlayerGame4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 302, 313 )
 scale = Vector2( 0.6, 0.6 )
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
+[node name="Camera2D" type="Camera2D" parent="PlayerGame4"]
 current = true
 zoom = Vector2( 2, 2 )
 limit_smoothed = true
 smoothing_enabled = true
 smoothing_speed = 7.0
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="Player"]
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="PlayerGame4"]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 30 )
 animation = "WalkRight"
-frame = 1
 playing = true
 
 [node name="DeadZone" type="Area2D" parent="."]
@@ -739,4 +767,16 @@ playing = true
 position = Vector2( 6928, 2562 )
 shape = SubResource( 24 )
 
-[connection signal="body_entered" from="DeadZone" to="Player" method="_on_DeadZone_body_entered"]
+[node name="Player2Game4" type="KinematicBody2D" parent="."]
+position = Vector2( 500, 300 )
+script = ExtResource( 37 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player2Game4"]
+frames = SubResource( 31 )
+animation = "Idle"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2Game4"]
+shape = SubResource( 32 )
+
+[connection signal="body_entered" from="DeadZone" to="PlayerGame4" method="_on_DeadZone_body_entered"]
