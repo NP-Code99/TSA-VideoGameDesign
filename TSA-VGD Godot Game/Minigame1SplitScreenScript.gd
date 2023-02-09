@@ -4,7 +4,7 @@ extends Node
 onready var viewport1 = $Viewports/ViewportContainer1/Viewport1
 onready var viewport2 = $Viewports/ViewportContainer2/Viewport2
 onready var camera1 = $Viewports/ViewportContainer1/Viewport1/Camera2D
-onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D
+onready var camera2 = $Viewports/ViewportContainer2/Viewport2/Camera2D2
 onready var world = $Viewports/ViewportContainer1/Viewport1/Node2D2
 
 func _ready():
