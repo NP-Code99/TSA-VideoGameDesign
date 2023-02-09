@@ -3,10 +3,10 @@
 [ext_resource path="res://Actors/Player.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 40, 89 )
+extents = Vector2( 40, 96 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 46, 105 )
+extents = Vector2( 46, 98 )
 
 [node name="Player" type="KinematicBody2D"]
 collision_mask = 8

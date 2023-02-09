@@ -667,14 +667,19 @@ points = PoolVector2Array( 70, 0, 70, 20, 60, 70, 10, 70, 0, 20, 0, 0, 0, 0 )
 
 [sub_resource type="SpriteFrames" id=30]
 animations = [ {
-"frames": [ ExtResource( 36 ) ],
+"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 34 ) ],
 "loop": true,
-"name": "Idle",
+"name": "WalkRight",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 33 ), ExtResource( 26 ), ExtResource( 33 ), ExtResource( 25 ) ],
 "loop": true,
 "name": "WalkBack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 36 ), ExtResource( 27 ), ExtResource( 36 ), ExtResource( 31 ) ],
@@ -685,11 +690,6 @@ animations = [ {
 "frames": [ ExtResource( 35 ), ExtResource( 28 ), ExtResource( 35 ), ExtResource( 32 ) ],
 "loop": true,
 "name": "WalkLeft",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 29 ), ExtResource( 30 ), ExtResource( 29 ), ExtResource( 34 ) ],
-"loop": true,
-"name": "WalkRight",
 "speed": 5.0
 } ]
 

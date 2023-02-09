@@ -1608,7 +1608,7 @@ points = PoolVector2Array( 9, 21, 90, 21, 90, 111, 9, 111 )
 size = 80
 font_data = ExtResource( 15 )
 
-[node name="Node2D2" type="Node2D"]
+[node name="Node2D3" type="Node2D"]
 script = ExtResource( 14 )
 
 [node name="Tilemaps" type="Node2D" parent="."]
