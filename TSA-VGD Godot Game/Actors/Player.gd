@@ -2,12 +2,12 @@ extends KinematicBody2D
 
 const UP_DIRECTION := Vector2.UP
 
-export var speed := 600.0 
-export var jump_strength := 1500.0
+export var speed := 1000.0 
+export var jump_strength := 2000.0
 export var maximum_jumps := 2 
 export var double_jump_strength := 1200.0 
 export var gravity := 4500.0 
-
+onready var animatedSprite = $AnimatedSprite2
 export var stomp_impulse: = 1000.0
 
 var _jumps_made := 0
@@ -50,6 +50,13 @@ func _physics_process(_delta: float) -> void:
 	if Input.is_action_pressed("key_respawn1"):
 		get_node(".").position.x = 0
 		get_node(".").position.y = 0
+	
+	if Input.is_action_pressed("move_left"):
+		animatedSprite.animation = "WalkLeft"
+	elif Input.is_action_pressed("move_right"):
+		animatedSprite.animation = "WalkRight"
+	else:
+		animatedSprite.animation = "Idle"
 		
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 
