@@ -75,16 +75,13 @@ animations = [ {
 position = Vector2( -4, 21 )
 
 [node name="Background" type="TextureRect" parent="."]
-margin_left = -1193.0
-margin_top = -3448.0
-margin_right = 3729.0
-margin_bottom = -2368.0
+margin_left = -162.0
+margin_top = -3103.0
+margin_right = 4760.0
+margin_bottom = -2023.0
 rect_scale = Vector2( 5, 5 )
 texture = ExtResource( 4 )
 stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 40, 0 )
@@ -102,6 +99,7 @@ position = Vector2( 274, 613 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "WalkRight"
+frame = 3
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

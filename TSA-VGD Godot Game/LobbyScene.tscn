@@ -1636,7 +1636,7 @@ format = 1
 [node name="Signs" type="Node2D" parent="."]
 
 [node name="DirectionSign" type="Sprite" parent="Signs"]
-position = Vector2( -366, 52 )
+position = Vector2( -69, 47 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
@@ -1651,7 +1651,7 @@ text = "MG 1
 <----"
 
 [node name="DirectionSign2" type="Sprite" parent="Signs"]
-position = Vector2( 520, -81 )
+position = Vector2( 219, 46 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
@@ -1665,44 +1665,8 @@ custom_fonts/font = SubResource( 36 )
 text = "MG 2
 ---->"
 
-[node name="DirectionSign3" type="Sprite" parent="Signs"]
-position = Vector2( -27, -703 )
-scale = Vector2( 0.117207, 0.140625 )
-texture = ExtResource( 16 )
-
-[node name="Label" type="Label" parent="Signs/DirectionSign3"]
-margin_left = -127.979
-margin_top = -177.778
-margin_right = 176.021
-margin_bottom = 25.2222
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 36 )
-text = "MG 3
-<----"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="DirectionSign4" type="Sprite" parent="Signs"]
-position = Vector2( 149, -704 )
-scale = Vector2( 0.117207, 0.140625 )
-texture = ExtResource( 16 )
-
-[node name="Label" type="Label" parent="Signs/DirectionSign4"]
-margin_left = -127.979
-margin_top = -177.778
-margin_right = 176.021
-margin_bottom = 25.2222
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 36 )
-text = "MG 4
----->"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="DirectionSign5" type="Sprite" parent="Signs"]
-position = Vector2( -14, -278 )
+position = Vector2( 131, -216 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
@@ -1717,7 +1681,7 @@ text = "MG 3
  Up"
 
 [node name="DirectionSign6" type="Sprite" parent="Signs"]
-position = Vector2( 151, 223 )
+position = Vector2( 141, 194 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
@@ -1729,10 +1693,7 @@ margin_bottom = 18.1108
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
 text = "MG 4
- Up"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+Down"
 
 [node name="Signpost" parent="Signs" instance=ExtResource( 7 )]
 position = Vector2( -360, -78 )

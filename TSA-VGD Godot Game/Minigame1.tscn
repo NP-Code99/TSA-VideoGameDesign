@@ -18,6 +18,7 @@
 [ext_resource path="res://assets/Tiles/canePink.png" type="Texture" id=16]
 [ext_resource path="res://candy background.webp" type="Texture" id=17]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.43_PM-removebg-preview.png" type="Texture" id=18]
+[ext_resource path="res://pony.png" type="Texture" id=19]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.49_PM-removebg-preview.png" type="Texture" id=20]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.34_PM-removebg-preview.png" type="Texture" id=21]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.15_PM-removebg-preview.png" type="Texture" id=22]
@@ -29,7 +30,6 @@
 [ext_resource path="res://jizz2/RLateral1.png" type="Texture" id=28]
 [ext_resource path="res://jizz2/mom Anterior 0.png" type="Texture" id=29]
 [ext_resource path="res://jizz2/RLateral 0.png" type="Texture" id=30]
-[ext_resource path="res://icon.png" type="Texture" id=31]
 [ext_resource path="res://Actors/fcc66b707550e2f.png" type="Texture" id=33]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=35]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.39_PM-removebg-preview.png" type="Texture" id=36]
@@ -515,15 +515,16 @@ playing = true
 position = Vector2( 1, 3 )
 shape = SubResource( 19 )
 
-[node name="Confetti" type="Area2D" parent="."]
+[node name="Pinata" type="Area2D" parent="."]
 
-[node name="confetti" type="Sprite" parent="Confetti"]
-position = Vector2( 2394, 8529 )
-texture = ExtResource( 31 )
+[node name="pinata" type="Sprite" parent="Pinata"]
+position = Vector2( 2395, 8531 )
+scale = Vector2( 2.03333, 1.92308 )
+texture = ExtResource( 19 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Confetti"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Pinata"]
 position = Vector2( 2393.38, 8529 )
 shape = SubResource( 20 )
 
 [connection signal="body_entered" from="DeadZones" to="Player" method="_on_DeadZone_body_entered"]
-[connection signal="body_entered" from="Confetti" to="Player" method="_on_Confetti_body_entered"]
+[connection signal="body_entered" from="Pinata" to="Player" method="_on_Confetti_body_entered"]
