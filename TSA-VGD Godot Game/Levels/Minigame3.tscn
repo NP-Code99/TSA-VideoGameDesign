@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/assets/start-assets/tileset.png" type="Texture" id=2]
@@ -17,6 +17,15 @@
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.11_PM-removebg-preview.png" type="Texture" id=15]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=16]
 [ext_resource path="res://icon.png" type="Texture" id=17]
+[ext_resource path="res://Levels/Player2ScriptMinigame3.gd" type="Script" id=18]
+[ext_resource path="res://jizz2/RLateral1.png" type="Texture" id=19]
+[ext_resource path="res://jizz2/mom Anterior 0.png" type="Texture" id=20]
+[ext_resource path="res://jizz2/LLateral1.png" type="Texture" id=21]
+[ext_resource path="res://jizz2/LLateral2.png" type="Texture" id=22]
+[ext_resource path="res://jizz2/RLateral 0.png" type="Texture" id=23]
+[ext_resource path="res://jizz2/RLateral2.png" type="Texture" id=24]
+[ext_resource path="res://jizz2/LLateral 0.png" type="Texture" id=25]
+[ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=26]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -72,22 +81,45 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 74.0
+height = 48.0
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "WalkLeft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"loop": true,
+"name": "WalkRight",
+"speed": 5.0
+} ]
+
 [sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="DynamicFont" id=7]
+size = 80
+font_data = ExtResource( 26 )
 
 [node name="Minigame3" type="Node2D"]
 position = Vector2( -4, 21 )
 
 [node name="Background" type="TextureRect" parent="."]
-margin_left = -1193.0
-margin_top = -3448.0
-margin_right = 3729.0
-margin_bottom = -2368.0
+margin_left = -1027.0
+margin_top = -3390.0
+margin_right = 3895.0
+margin_bottom = -2310.0
 rect_scale = Vector2( 5, 5 )
 texture = ExtResource( 4 )
 stretch_mode = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 40, 0 )
@@ -105,12 +137,28 @@ position = Vector2( 274, 677 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "WalkFront"
-frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 zoom = Vector2( 2, 2 )
+
+[node name="Player2" type="KinematicBody2D" parent="."]
+position = Vector2( 552, 674 )
+collision_layer = 8
+collision_mask = 8
+script = ExtResource( 18 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2"]
+position = Vector2( 21, -76 )
+shape = SubResource( 5 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Player2"]
+position = Vector2( 26, -60 )
+scale = Vector2( 1.79717, 1.87644 )
+frames = SubResource( 6 )
+animation = "Idle"
+playing = true
 
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5536, -70 )
@@ -156,3 +204,11 @@ texture = ExtResource( 17 )
 position = Vector2( 20545, -807 )
 scale = Vector2( 1.54688, 1.46875 )
 shape = SubResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 285.0
+margin_top = 375.0
+margin_right = 1037.0
+margin_bottom = 455.0
+custom_fonts/font = SubResource( 7 )
+text = "Sweet Meadows"

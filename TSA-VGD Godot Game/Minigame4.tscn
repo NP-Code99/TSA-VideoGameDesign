@@ -769,7 +769,7 @@ smoothing_speed = 7.0
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 30 )
 animation = "WalkRight"
-frame = 3
+frame = 1
 playing = true
 
 [node name="DeadZone" type="Area2D" parent="."]

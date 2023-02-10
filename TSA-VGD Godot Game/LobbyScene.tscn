@@ -1609,6 +1609,7 @@ size = 80
 font_data = ExtResource( 15 )
 
 [node name="Node2D3" type="Node2D"]
+position = Vector2( 11, -1 )
 script = ExtResource( 14 )
 
 [node name="Tilemaps" type="Node2D" parent="."]
@@ -1712,7 +1713,7 @@ position = Vector2( 138, -311 )
 input_pickable = true
 
 [node name="Sullivan" parent="." instance=ExtResource( 2 )]
-position = Vector2( 118, -19 )
+position = Vector2( -26, -17 )
 
 [node name="Camera2D" type="Camera2D" parent="Sullivan"]
 current = true
@@ -1720,7 +1721,7 @@ smoothing_enabled = true
 smoothing_speed = 3.0
 
 [node name="Stephanie" parent="." instance=ExtResource( 4 )]
-position = Vector2( 21, -17 )
+position = Vector2( 152, -14 )
 
 [node name="Checkpoint1Collision" parent="." instance=ExtResource( 8 )]
 position = Vector2( -755, -175 )
