@@ -1660,7 +1660,7 @@ margin_right = 176.021
 margin_bottom = 32.3336
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
-text = "MG 1
+text = "GAME 1
 <----"
 
 [node name="DirectionSign2" type="Sprite" parent="Signs"]
@@ -1669,13 +1669,13 @@ scale = Vector2( 0.164, 0.185 )
 texture = ExtResource( 16 )
 
 [node name="Label" type="Label" parent="Signs/DirectionSign2"]
-margin_left = -101.439
-margin_top = -165.161
-margin_right = 202.561
-margin_bottom = 37.8389
+margin_left = -134.146
+margin_top = -156.757
+margin_right = 169.854
+margin_bottom = 46.2432
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
-text = "MG 2
+text = "GAME 2
 ---->"
 
 [node name="DirectionSign5" type="Sprite" parent="Signs"]
