@@ -66,6 +66,17 @@ margin_left = 11.0
 margin_top = 62.0
 margin_right = 332.0
 margin_bottom = 111.0
+rect_pivot_offset = Vector2( 231, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Goal: Complete the Underground Maze "
+
+[node name="Objective3" type="Label" parent="."]
+margin_left = 527.0
+margin_top = 63.0
+margin_right = 848.0
+margin_bottom = 112.0
+rect_pivot_offset = Vector2( 231, 25 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Goal: Complete the Underground Maze "

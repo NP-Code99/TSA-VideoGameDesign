@@ -1636,7 +1636,7 @@ format = 1
 [node name="Signs" type="Node2D" parent="."]
 
 [node name="DirectionSign" type="Sprite" parent="Signs"]
-position = Vector2( -69, 47 )
+position = Vector2( -95, 47 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
@@ -1681,7 +1681,7 @@ text = "MG 3
  Up"
 
 [node name="DirectionSign6" type="Sprite" parent="Signs"]
-position = Vector2( 141, 194 )
+position = Vector2( 139, 182 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/assets/start-assets/tileset.png" type="Texture" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.55_PM-removebg-preview.png" type="Texture" id=14]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.11_PM-removebg-preview.png" type="Texture" id=15]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=16]
+[ext_resource path="res://icon.png" type="Texture" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -45,19 +46,14 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "WalkRight",
+"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "WalkBack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "Idle",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 8 ) ],
@@ -69,7 +65,14 @@ animations = [ {
 "loop": true,
 "name": "WalkLeft",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "WalkRight",
+"speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=4]
 
 [node name="Minigame3" type="Node2D"]
 position = Vector2( -4, 21 )
@@ -102,7 +105,7 @@ position = Vector2( 274, 677 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "WalkFront"
-frame = 1
+frame = 2
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -141,3 +144,15 @@ position = Vector2( 1775, 666 )
 
 [node name="Enemy3" parent="." instance=ExtResource( 3 )]
 position = Vector2( 2605, 718 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite" type="Sprite" parent="Area2D"]
+position = Vector2( 20545, -807 )
+scale = Vector2( 1.54688, 1.46875 )
+texture = ExtResource( 17 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 20545, -807 )
+scale = Vector2( 1.54688, 1.46875 )
+shape = SubResource( 4 )

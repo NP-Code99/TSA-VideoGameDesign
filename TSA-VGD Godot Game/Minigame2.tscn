@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://LobbyPlayer2.tscn" type="PackedScene" id=1]
 [ext_resource path="res://LobbyPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://output-onlinepngtools.png" type="Texture" id=3]
 [ext_resource path="res://Tmaze.png" type="Texture" id=4]
 [ext_resource path="res://26_april_8.png" type="Texture" id=5]
+[ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=6]
 
 [sub_resource type="SegmentShape2D" id=7]
 a = Vector2( -21, -1.42857 )
@@ -73,10 +74,14 @@ b = Vector2( -507.999, 613.999 )
 [sub_resource type="RectangleShape2D" id=18]
 extents = Vector2( 6.29569, 10.7001 )
 
+[sub_resource type="DynamicFont" id=20]
+size = 30
+font_data = ExtResource( 6 )
+
 [node name="Node2D" type="Node2D"]
 
 [node name="pink backround" type="Sprite" parent="."]
-position = Vector2( 36.9999, -63 )
+position = Vector2( 33, -57 )
 scale = Vector2( 0.29232, 0.25491 )
 texture = ExtResource( 5 )
 
@@ -691,6 +696,22 @@ shape = SubResource( 18 )
 position = Vector2( 4.3604, -0.851274 )
 scale = Vector2( 0.113931, 0.13073 )
 texture = ExtResource( 3 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = -475.0
+margin_top = 247.0
+margin_right = -68.0
+margin_bottom = 281.0
+custom_fonts/font = SubResource( 20 )
+text = "Confetti Connections"
+
+[node name="Title2" type="Label" parent="."]
+margin_left = 74.0
+margin_top = 249.0
+margin_right = 481.0
+margin_bottom = 283.0
+custom_fonts/font = SubResource( 20 )
+text = "Confetti Connections"
 
 [connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Ltop" to="LobbyPlayer2" method="_on_SBLtop_body_entered"]
 [connection signal="body_entered" from="Tmaze2 mom/mom collision/SB-Rtop" to="LobbyPlayer2" method="_on_SBRtop_body_entered"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=56 format=2]
 
 [ext_resource path="res://jizz2/LLateral2.png" type="Texture" id=1]
 [ext_resource path="res://WorldTileSet.tres" type="TileSet" id=2]
@@ -30,6 +30,7 @@
 [ext_resource path="res://jizz2/RLateral1.png" type="Texture" id=28]
 [ext_resource path="res://jizz2/mom Anterior 0.png" type="Texture" id=29]
 [ext_resource path="res://jizz2/RLateral 0.png" type="Texture" id=30]
+[ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=31]
 [ext_resource path="res://Actors/fcc66b707550e2f.png" type="Texture" id=33]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=35]
 [ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.39_PM-removebg-preview.png" type="Texture" id=36]
@@ -385,6 +386,10 @@ height = 0.0
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 31.625, 30.5 )
 
+[sub_resource type="DynamicFont" id=21]
+size = 100
+font_data = ExtResource( 31 )
+
 [node name="Node2D2" type="Node2D"]
 
 [node name="CandyBackground" type="Sprite" parent="."]
@@ -525,6 +530,14 @@ texture = ExtResource( 19 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Pinata"]
 position = Vector2( 2393.38, 8529 )
 shape = SubResource( 20 )
+
+[node name="Title" type="Label" parent="."]
+margin_left = -759.0
+margin_top = -228.0
+margin_right = 81.0
+margin_bottom = -128.0
+custom_fonts/font = SubResource( 21 )
+text = "Cake Kingdom"
 
 [connection signal="body_entered" from="DeadZones" to="Player" method="_on_DeadZone_body_entered"]
 [connection signal="body_entered" from="Pinata" to="Player" method="_on_Confetti_body_entered"]
