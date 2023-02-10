@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://assets/Texture/TX Tileset Grass.png" type="Texture" id=1]
 [ext_resource path="res://LobbyPlayer.tscn" type="PackedScene" id=2]
@@ -11,15 +11,13 @@
 [ext_resource path="res://assets/SERENE_VILLAGE_REVAMPED/Serene_Village_48x48.png" type="Texture" id=9]
 [ext_resource path="res://assets/SERENE_VILLAGE_REVAMPED/Serene_Village_32x32.png" type="Texture" id=10]
 [ext_resource path="res://Checkpoint Collisions/Checkpoint3Collision.tscn" type="PackedScene" id=11]
-[ext_resource path="res://dialogues/guide_npc.tscn" type="PackedScene" id=12]
 [ext_resource path="res://lobby_music.tscn" type="PackedScene" id=13]
 [ext_resource path="res://LobbySceneScript.gd" type="Script" id=14]
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=15]
 [ext_resource path="res://assets/signposts/pngs/mid_tone_with_writing.png" type="Texture" id=16]
 [ext_resource path="res://Checkpoint2Collision.tscn" type="PackedScene" id=17]
-[ext_resource path="res://assets/signposts/pngs/message.png" type="Texture" id=18]
+[ext_resource path="res://MainSign.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Minigame1SplitScreen.tscn" type="PackedScene" id=19]
-[ext_resource path="res://assets/signposts/pngs/mid_tone_pointed.png" type="Texture" id=20]
 [ext_resource path="res://Checkpoint Collisions/Checkpoint3CollisionScript.gd" type="Script" id=21]
 [ext_resource path="res://Minigame3SplitScreen.tscn" type="PackedScene" id=22]
 [ext_resource path="res://Checkpoint Collisions/Checkpoint4Collision.tscn" type="PackedScene" id=23]
@@ -1605,7 +1603,7 @@ points = PoolVector2Array( 9, 21, 90, 21, 90, 111, 9, 111 )
 18/z_index = 0
 
 [sub_resource type="DynamicFont" id=36]
-size = 60
+size = 80
 font_data = ExtResource( 15 )
 
 [node name="Node2D3" type="Node2D"]
@@ -1741,20 +1739,10 @@ transitionGameScene = ExtResource( 22 )
 position = Vector2( -84, 560 )
 transitionGameScene = ExtResource( 24 )
 
-[node name="guide_npc" parent="." instance=ExtResource( 12 )]
-position = Vector2( -15.2499, -87.9999 )
-
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 13 )]
 
-[node name="MidTonePointed" type="Sprite" parent="."]
-position = Vector2( 64, -22 )
-scale = Vector2( 0.108696, 0.136719 )
-texture = ExtResource( 20 )
-
-[node name="Message" type="Sprite" parent="MidTonePointed"]
-position = Vector2( -27.6, -95.0857 )
-scale = Vector2( 0.796772, 0.821508 )
-texture = ExtResource( 18 )
+[node name="MainSign" parent="." instance=ExtResource( 18 )]
+position = Vector2( 65, -11 )
 
 [connection signal="body_entered" from="Checkpoint2Collision" to="Checkpoint2Collision" method="_on_Checkpoint2Collision_body_entered"]
 [connection signal="body_exited" from="Checkpoint2Collision" to="Checkpoint2Collision" method="_on_Checkpoint2Collision_body_exited"]

@@ -142,7 +142,7 @@ position = Vector2( 274, 677 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "WalkFront"
-frame = 2
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
