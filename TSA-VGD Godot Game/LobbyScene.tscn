@@ -1636,7 +1636,7 @@ format = 1
 tile_data = PoolIntArray( -3, 18, 0, -65534, 5, 0, 196605, 2, 0, 131074, 0, 0 )
 
 [node name="Sullivan" parent="." instance=ExtResource( 2 )]
-position = Vector2( -21, -15 )
+position = Vector2( -73, -3 )
 
 [node name="Camera2D" type="Camera2D" parent="Sullivan"]
 current = true
@@ -1644,13 +1644,13 @@ smoothing_enabled = true
 smoothing_speed = 3.0
 
 [node name="Stephanie" parent="." instance=ExtResource( 4 )]
-position = Vector2( 152, -14 )
+position = Vector2( 176, -3 )
 
 [node name="Signs" type="Node2D" parent="."]
 
 [node name="DirectionSign" type="Sprite" parent="Signs"]
-position = Vector2( 13, 63 )
-scale = Vector2( 0.117207, 0.140625 )
+position = Vector2( 0, 72 )
+scale = Vector2( 0.164, 0.185 )
 texture = ExtResource( 16 )
 
 [node name="Label" type="Label" parent="Signs/DirectionSign"]
@@ -1664,38 +1664,38 @@ text = "MG 1
 <----"
 
 [node name="DirectionSign2" type="Sprite" parent="Signs"]
-position = Vector2( 121, 62 )
-scale = Vector2( 0.117207, 0.140625 )
+position = Vector2( 127, 73 )
+scale = Vector2( 0.164, 0.185 )
 texture = ExtResource( 16 )
 
 [node name="Label" type="Label" parent="Signs/DirectionSign2"]
-margin_left = -127.979
-margin_top = -177.778
-margin_right = 176.021
-margin_bottom = 25.2222
+margin_left = -101.439
+margin_top = -165.161
+margin_right = 202.561
+margin_bottom = 37.8389
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
 text = "MG 2
 ---->"
 
 [node name="DirectionSign5" type="Sprite" parent="Signs"]
-position = Vector2( 117, -70 )
-scale = Vector2( 0.117207, 0.140625 )
+position = Vector2( 128, -78 )
+scale = Vector2( 0.163965, 0.18457 )
 texture = ExtResource( 16 )
 
 [node name="Label2" type="Label" parent="Signs/DirectionSign5"]
-margin_left = -127.979
-margin_top = -163.556
-margin_right = 180.021
-margin_bottom = 39.4445
+margin_left = -115.878
+margin_top = -167.958
+margin_right = 192.122
+margin_bottom = 35.0423
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
 text = "GAME
-3 down"
+3 UP"
 
 [node name="DirectionSign6" type="Sprite" parent="Signs"]
-position = Vector2( 24, -88 )
-scale = Vector2( 0.117207, 0.140625 )
+position = Vector2( 17, -100 )
+scale = Vector2( 0.164, 0.185 )
 texture = ExtResource( 16 )
 offset = Vector2( -102.383, 113.778 )
 
@@ -1742,12 +1742,12 @@ position = Vector2( -84, 560 )
 transitionGameScene = ExtResource( 24 )
 
 [node name="guide_npc" parent="." instance=ExtResource( 12 )]
-position = Vector2( -15.2499, -87.9999 )
+position = Vector2( -36, -195 )
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 13 )]
 
 [node name="MidTonePointed" type="Sprite" parent="."]
-position = Vector2( 64, -22 )
+position = Vector2( 66, -18 )
 scale = Vector2( 0.108696, 0.136719 )
 texture = ExtResource( 20 )
 
