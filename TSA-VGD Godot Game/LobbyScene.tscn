@@ -1633,7 +1633,7 @@ position = Vector2( 0, -150 )
 scale = Vector2( 1.5, 1.5 )
 tile_set = SubResource( 12 )
 format = 1
-tile_data = PoolIntArray( -3, 18, 0, -65534, 5, 0, 196605, 2, 0, 131074, 0, 0 )
+tile_data = PoolIntArray( -3, 18, 0, -65534, 5, 0, 196605, 3, 0, 131074, 0, 0 )
 
 [node name="Sullivan" parent="." instance=ExtResource( 2 )]
 position = Vector2( -73, -3 )
@@ -1649,7 +1649,7 @@ position = Vector2( 176, -3 )
 [node name="Signs" type="Node2D" parent="."]
 
 [node name="DirectionSign" type="Sprite" parent="Signs"]
-position = Vector2( 0, 72 )
+position = Vector2( -29, 96 )
 scale = Vector2( 0.164, 0.185 )
 texture = ExtResource( 16 )
 
@@ -1664,7 +1664,7 @@ text = "MG 1
 <----"
 
 [node name="DirectionSign2" type="Sprite" parent="Signs"]
-position = Vector2( 127, 73 )
+position = Vector2( 159, 96 )
 scale = Vector2( 0.164, 0.185 )
 texture = ExtResource( 16 )
 
@@ -1679,7 +1679,7 @@ text = "MG 2
 ---->"
 
 [node name="DirectionSign5" type="Sprite" parent="Signs"]
-position = Vector2( 128, -78 )
+position = Vector2( 159, -82 )
 scale = Vector2( 0.163965, 0.18457 )
 texture = ExtResource( 16 )
 
@@ -1694,16 +1694,16 @@ text = "GAME
 3 UP"
 
 [node name="DirectionSign6" type="Sprite" parent="Signs"]
-position = Vector2( 17, -100 )
+position = Vector2( -13, -104 )
 scale = Vector2( 0.164, 0.185 )
 texture = ExtResource( 16 )
 offset = Vector2( -102.383, 113.778 )
 
 [node name="Label" type="Label" parent="Signs/DirectionSign6"]
-margin_left = -213.298
-margin_top = -71.1111
-margin_right = 94.7021
-margin_bottom = 131.889
+margin_left = -219.512
+margin_top = -64.8648
+margin_right = 88.4879
+margin_bottom = 138.135
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
 text = "GAME
@@ -1742,7 +1742,7 @@ position = Vector2( -84, 560 )
 transitionGameScene = ExtResource( 24 )
 
 [node name="guide_npc" parent="." instance=ExtResource( 12 )]
-position = Vector2( -36, -195 )
+position = Vector2( 65, -26 )
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 13 )]
 
