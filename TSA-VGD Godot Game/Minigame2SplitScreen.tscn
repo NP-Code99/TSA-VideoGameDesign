@@ -83,7 +83,7 @@ rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 139, 20 )
 custom_colors/font_color_shadow = Color( 0.105882, 0.0745098, 0.0745098, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Stephanie (Arrow Keys)"
+text = "Stephanie (Arrows)"
 
 [node name="Objective" type="Label" parent="."]
 margin_left = 11.0

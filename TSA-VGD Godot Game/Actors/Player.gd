@@ -75,3 +75,12 @@ func _on_cake_body_entered(body: Node) -> void:
 			TransitionScene.change_scene("res://PartyScene.tscn")
 		else:
 			TransitionScene.change_scene("res://LobbySplitScreen.tscn") 
+
+
+func _on_ice_cream_body_entered(body: Node) -> void:
+	if body.name == "Player" or body.name == "Player2":
+		MinigameCounter.count()
+		if MinigameCounter.minigamesFinished == 4:
+			TransitionScene.change_scene("res://PartyScene.tscn")
+		else:
+			TransitionScene.change_scene("res://LobbySplitScreen.tscn") 

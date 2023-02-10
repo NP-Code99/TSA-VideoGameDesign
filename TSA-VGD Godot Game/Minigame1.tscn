@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://jizz2/LLateral2.png" type="Texture" id=1]
 [ext_resource path="res://WorldTileSet.tres" type="TileSet" id=2]
@@ -390,6 +390,9 @@ extents = Vector2( 31.625, 30.5 )
 size = 100
 font_data = ExtResource( 31 )
 
+[sub_resource type="DynamicFont" id=22]
+font_data = ExtResource( 31 )
+
 [node name="Node2D2" type="Node2D"]
 
 [node name="CandyBackground" type="Sprite" parent="."]
@@ -538,6 +541,14 @@ margin_right = 81.0
 margin_bottom = -128.0
 custom_fonts/font = SubResource( 21 )
 text = "Cake Kingdom"
+
+[node name="Label" type="Label" parent="."]
+margin_left = -211.0
+margin_top = -50.0
+margin_right = 110.0
+margin_bottom = 4.0
+custom_fonts/font = SubResource( 22 )
+text = "Double Click W for Double Jump"
 
 [connection signal="body_entered" from="DeadZones" to="Player" method="_on_DeadZone_body_entered"]
 [connection signal="body_entered" from="Pinata" to="Player" method="_on_Confetti_body_entered"]
