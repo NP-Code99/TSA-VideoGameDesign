@@ -710,6 +710,7 @@ margin_left = 74.0
 margin_top = 249.0
 margin_right = 481.0
 margin_bottom = 283.0
+rect_pivot_offset = Vector2( -373, 57 )
 custom_fonts/font = SubResource( 20 )
 text = "Confetti Connections"
 

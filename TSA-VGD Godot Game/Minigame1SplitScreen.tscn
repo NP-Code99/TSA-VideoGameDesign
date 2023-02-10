@@ -90,7 +90,7 @@ rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 139, 20 )
 custom_colors/font_color_shadow = Color( 0.0705882, 0.054902, 0.054902, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Sullivan"
+text = "Sullivan (WASD)"
 
 [node name="Label3" type="Label" parent="."]
 margin_left = 674.0
@@ -101,4 +101,4 @@ rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 139, 20 )
 custom_colors/font_color_shadow = Color( 0.105882, 0.0745098, 0.0745098, 1 )
 custom_fonts/font = SubResource( 2 )
-text = "Ste[phanie"
+text = "Stephanie (Arrows)"
