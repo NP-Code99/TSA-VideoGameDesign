@@ -1605,7 +1605,7 @@ points = PoolVector2Array( 9, 21, 90, 21, 90, 111, 9, 111 )
 18/z_index = 0
 
 [sub_resource type="DynamicFont" id=36]
-size = 80
+size = 60
 font_data = ExtResource( 15 )
 
 [node name="Node2D3" type="Node2D"]
@@ -1649,7 +1649,7 @@ position = Vector2( 152, -14 )
 [node name="Signs" type="Node2D" parent="."]
 
 [node name="DirectionSign" type="Sprite" parent="Signs"]
-position = Vector2( -65, 40 )
+position = Vector2( 13, 63 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
@@ -1664,7 +1664,7 @@ text = "MG 1
 <----"
 
 [node name="DirectionSign2" type="Sprite" parent="Signs"]
-position = Vector2( 182, 39 )
+position = Vector2( 121, 62 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
@@ -1679,34 +1679,35 @@ text = "MG 2
 ---->"
 
 [node name="DirectionSign5" type="Sprite" parent="Signs"]
-position = Vector2( 126, -108 )
+position = Vector2( 117, -70 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
 
-[node name="Label" type="Label" parent="Signs/DirectionSign5"]
+[node name="Label2" type="Label" parent="Signs/DirectionSign5"]
 margin_left = -127.979
-margin_top = -184.889
-margin_right = 176.021
-margin_bottom = 18.1108
+margin_top = -163.556
+margin_right = 180.021
+margin_bottom = 39.4445
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
-text = "MG 3 
- Up"
+text = "GAME
+3 down"
 
 [node name="DirectionSign6" type="Sprite" parent="Signs"]
-position = Vector2( 126, 107 )
+position = Vector2( 24, -88 )
 scale = Vector2( 0.117207, 0.140625 )
 texture = ExtResource( 16 )
+offset = Vector2( -102.383, 113.778 )
 
 [node name="Label" type="Label" parent="Signs/DirectionSign6"]
-margin_left = -127.979
-margin_top = -184.889
-margin_right = 176.021
-margin_bottom = 18.1108
+margin_left = -213.298
+margin_top = -71.1111
+margin_right = 94.7021
+margin_bottom = 131.889
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
-text = "MG 4
-Down"
+text = "GAME
+4 down"
 
 [node name="Signpost" parent="Signs" instance=ExtResource( 7 )]
 position = Vector2( -368, -79 )
@@ -1741,12 +1742,12 @@ position = Vector2( -84, 560 )
 transitionGameScene = ExtResource( 24 )
 
 [node name="guide_npc" parent="." instance=ExtResource( 12 )]
-position = Vector2( -16, -89 )
+position = Vector2( -15.2499, -87.9999 )
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 13 )]
 
 [node name="MidTonePointed" type="Sprite" parent="."]
-position = Vector2( -14, -95 )
+position = Vector2( 64, -22 )
 scale = Vector2( 0.108696, 0.136719 )
 texture = ExtResource( 20 )
 
