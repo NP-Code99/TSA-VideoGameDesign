@@ -55,19 +55,9 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "WalkBack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 8 ) ],
-"loop": true,
-"name": "WalkFront",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 13 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 9 ) ],
@@ -75,9 +65,19 @@ animations = [ {
 "name": "WalkLeft",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "WalkRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "WalkFront",
 "speed": 5.0
 } ]
 
@@ -142,7 +142,7 @@ position = Vector2( 274, 677 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 3 )
 animation = "WalkFront"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
