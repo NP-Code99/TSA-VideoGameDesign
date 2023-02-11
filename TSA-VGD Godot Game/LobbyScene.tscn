@@ -1603,7 +1603,7 @@ points = PoolVector2Array( 9, 21, 90, 21, 90, 111, 9, 111 )
 18/z_index = 0
 
 [sub_resource type="DynamicFont" id=36]
-size = 80
+size = 60
 font_data = ExtResource( 15 )
 
 [node name="Node2D3" type="Node2D"]
