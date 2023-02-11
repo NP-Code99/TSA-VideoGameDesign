@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Crescent-Moon.mp3-d76bc292fd771259ff3a0d946bf6d27a.mp3str"
+
+[deps]
+
+source_file="res://Crescent-Moon.mp3"
+dest_files=[ "res://.import/Crescent-Moon.mp3-d76bc292fd771259ff3a0d946bf6d27a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

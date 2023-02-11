@@ -60,19 +60,14 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "WalkBack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "WalkFront",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 5 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 11 ) ],
-"loop": true,
-"name": "WalkRight",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 13 ) ],
@@ -80,9 +75,14 @@ animations = [ {
 "name": "WalkLeft",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 11 ) ],
 "loop": true,
-"name": "idle",
+"name": "WalkRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "WalkFront",
 "speed": 5.0
 } ]
 
@@ -97,14 +97,14 @@ animations = [ {
 "name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 28 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "WalkFront",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 28 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "WalkLeft",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 31 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 20 ) ],
@@ -112,9 +112,9 @@ animations = [ {
 "name": "WalkRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 28 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 25 ) ],
 "loop": true,
-"name": "WalkLeft",
+"name": "WalkFront",
 "speed": 5.0
 } ]
 
@@ -168,7 +168,7 @@ position = Vector2( 0, -17 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 10 )
 animation = "WalkLeft"
-frame = 2
+frame = 3
 playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="."]
