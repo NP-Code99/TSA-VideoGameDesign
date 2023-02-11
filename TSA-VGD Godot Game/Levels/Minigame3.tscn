@@ -1,9 +1,9 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/assets/start-assets/tileset.png" type="Texture" id=2]
 [ext_resource path="res://Actors/Enemy.tscn" type="PackedScene" id=3]
-[ext_resource path="res://assets/assets/start-assets/background.png" type="Texture" id=4]
+[ext_resource path="res://Minigame3bg.png" type="Texture" id=4]
 [ext_resource path="res://Screenshot_2023-02-10_at_6.31.16_PM-removebg-preview.png" type="Texture" id=5]
 [ext_resource path="res://Screenshot_2023-02-10_at_6.31.53_PM-removebg-preview.png" type="Texture" id=6]
 [ext_resource path="res://Screenshot_2023-02-10_at_6.32.06_PM-removebg-preview.png" type="Texture" id=7]
@@ -97,14 +97,14 @@ animations = [ {
 "name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 27 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 22 ) ],
-"loop": true,
-"name": "WalkLeft",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 28 ) ],
 "loop": true,
 "name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 27 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "WalkLeft",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 31 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 20 ) ],
@@ -117,6 +117,9 @@ animations = [ {
 "name": "WalkFront",
 "speed": 5.0
 } ]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 46, 105 )
 
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 21.4849, 37.3936 )
@@ -185,6 +188,16 @@ frames = SubResource( 9 )
 animation = "Idle"
 playing = true
 
+[node name="EnemyDetector" type="Area2D" parent="Player2"]
+modulate = Color( 0.0470588, 0.286275, 0.698039, 1 )
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player2/EnemyDetector"]
+position = Vector2( 0, -34 )
+shape = SubResource( 11 )
+
 [node name="Enemy" parent="." instance=ExtResource( 3 )]
 position = Vector2( 5536, -70 )
 
@@ -241,3 +254,4 @@ custom_fonts/font = SubResource( 8 )
 text = "Double Click W for Double Jump"
 
 [connection signal="body_entered" from="ice cream" to="Player" method="_on_ice_cream_body_entered"]
+[connection signal="body_entered" from="ice cream" to="Player2" method="_on_ice_cream_body_entered"]

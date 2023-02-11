@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Screenshot_2023-02-10_at_5.37.01_PM-removebg-preview.png" type="Texture" id=1]
 [ext_resource path="res://WorldTileSet.tres" type="TileSet" id=2]
@@ -43,6 +43,8 @@
 [ext_resource path="res://Screenshot_2023-02-10_at_5.38.32_PM-removebg-preview.png" type="Texture" id=41]
 [ext_resource path="res://Screenshot_2023-02-10_at_5.38.27_PM-removebg-preview.png" type="Texture" id=42]
 [ext_resource path="res://Screenshot_2023-02-10_at_5.38.04_PM-removebg-preview.png" type="Texture" id=43]
+[ext_resource path="res://Minigame1Script.gd" type="Script" id=44]
+[ext_resource path="res://Silent_Wood.mp3" type="AudioStream" id=45]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 70, 0, 70, 39, 0, 39 )
@@ -343,19 +345,14 @@ height = 8.0
 
 [sub_resource type="SpriteFrames" id=23]
 animations = [ {
-"frames": [ ExtResource( 36 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 22 ), ExtResource( 20 ), ExtResource( 22 ), ExtResource( 21 ) ],
 "loop": true,
 "name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 35 ) ],
+"frames": [ ExtResource( 36 ), ExtResource( 23 ), ExtResource( 36 ), ExtResource( 24 ) ],
 "loop": true,
-"name": "WalkLeft",
+"name": "WalkFront",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 18 ), ExtResource( 34 ), ExtResource( 18 ), ExtResource( 32 ) ],
@@ -363,9 +360,14 @@ animations = [ {
 "name": "WalkRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 36 ), ExtResource( 23 ), ExtResource( 36 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 37 ), ExtResource( 38 ), ExtResource( 37 ), ExtResource( 35 ) ],
 "loop": true,
-"name": "WalkFront",
+"name": "WalkLeft",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 36 ) ],
+"loop": true,
+"name": "idle",
 "speed": 5.0
 } ]
 
@@ -380,9 +382,9 @@ animations = [ {
 "name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 39 ), ExtResource( 26 ), ExtResource( 39 ), ExtResource( 27 ) ],
+"frames": [ ExtResource( 40 ), ExtResource( 1 ), ExtResource( 40 ), ExtResource( 30 ) ],
 "loop": true,
-"name": "WalkLeft",
+"name": "WalkFront",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 40 ) ],
@@ -395,9 +397,9 @@ animations = [ {
 "name": "WalkRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 40 ), ExtResource( 1 ), ExtResource( 40 ), ExtResource( 30 ) ],
+"frames": [ ExtResource( 39 ), ExtResource( 26 ), ExtResource( 39 ), ExtResource( 27 ) ],
 "loop": true,
-"name": "WalkFront",
+"name": "WalkLeft",
 "speed": 5.0
 } ]
 
@@ -412,6 +414,7 @@ font_data = ExtResource( 31 )
 font_data = ExtResource( 31 )
 
 [node name="Node2D2" type="Node2D"]
+script = ExtResource( 44 )
 
 [node name="CandyBackground" type="Sprite" parent="."]
 position = Vector2( -546, 6798 )
@@ -496,7 +499,7 @@ position = Vector2( -1473.13, 6406 )
 shape = SubResource( 15 )
 
 [node name="DeadZoneCollision8" type="CollisionShape2D" parent="DeadZones"]
-position = Vector2( 1530.88, 5064 )
+position = Vector2( 1530.87, 5046 )
 shape = SubResource( 15 )
 
 [node name="DeadZoneCollision9" type="CollisionShape2D" parent="DeadZones"]
@@ -527,7 +530,6 @@ smoothing_speed = 100.0
 scale = Vector2( 0.17, 0.17 )
 frames = SubResource( 23 )
 animation = "WalkLeft"
-frame = 1
 playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="."]
@@ -572,6 +574,10 @@ margin_right = 110.0
 margin_bottom = 4.0
 custom_fonts/font = SubResource( 22 )
 text = "Double Click W for Double Jump"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 45 )
+autoplay = true
 
 [connection signal="body_entered" from="DeadZones" to="Player" method="_on_DeadZone_body_entered"]
 [connection signal="body_entered" from="Pinata" to="Player" method="_on_Confetti_body_entered"]

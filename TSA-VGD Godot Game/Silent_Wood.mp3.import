@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Silent_Wood.mp3-1d2dd0958839b4f3edf1bb0129f52abd.mp3str"
+
+[deps]
+
+source_file="res://Silent_Wood.mp3"
+dest_files=[ "res://.import/Silent_Wood.mp3-1d2dd0958839b4f3edf1bb0129f52abd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

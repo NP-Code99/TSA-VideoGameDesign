@@ -3,7 +3,7 @@
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://StartingScreenScript.gd" type="Script" id=2]
 [ext_resource path="res://LobbySplitScreen.tscn" type="PackedScene" id=3]
-[ext_resource path="res://background/party themed.jpg" type="Texture" id=4]
+[ext_resource path="res://Titlebg.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=6]
 size = 50
@@ -39,6 +39,9 @@ corner_radius_bottom_left = 5
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 mainGameScene = ExtResource( 3 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -52,11 +55,14 @@ __meta__ = {
 }
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_right = 510.0
+margin_right = 512.0
 margin_bottom = 336.0
 rect_scale = Vector2( 2.01054, 1.78669 )
 texture = ExtResource( 4 )
 expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 252.0

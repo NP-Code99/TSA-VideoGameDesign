@@ -57,3 +57,12 @@ func _on_DeadZone_body_entered(body: Node) -> void:
 	if body.name == "Player2Game4":
 		get_node(".").position.x = 402
 		get_node(".").position.y = 313
+
+
+func _on_ice_cream_body_entered(body):
+	if body.name == "Player2":
+		MinigameCounter.count()
+		if MinigameCounter.minigamesFinished == 4:
+			TransitionScene.change_scene("res://PartyScene.tscn")
+		else:
+			TransitionScene.change_scene("res://LobbySplitScreen.tscn") 

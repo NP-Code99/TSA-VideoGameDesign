@@ -27,7 +27,7 @@ func read_input():
 		animatedSprite.animation ="idle"
 	
 	velocity = velocity.normalized()
-	velocity = move_and_slide(velocity * 300)
+	velocity = move_and_slide(velocity * 250)
 	
 func _physics_process(delta):
 	read_input()

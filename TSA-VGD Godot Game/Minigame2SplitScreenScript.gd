@@ -11,3 +11,8 @@ func _ready():
 	viewport2.world_2d = viewport1.world_2d
 	camera1.target = world.get_node("LobbyPlayer")
 	camera2.target = world.get_node("LobbyPlayer2")
+
+func _process(delta):
+	if $AudioStreamPlayer2D.playing == false:
+		yield(get_tree().create_timer(0.0000001), "timeout")
+		$AudioStreamPlayer2D.play()
