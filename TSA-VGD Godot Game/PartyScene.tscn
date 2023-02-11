@@ -1,11 +1,11 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/Sprites/14-TileSets/Terrain (32x32).png" type="Texture" id=1]
 [ext_resource path="res://TopDownHouse_SmallItems.png" type="Texture" id=2]
 [ext_resource path="res://TopDownHouse_FloorsAndWalls.png" type="Texture" id=3]
 [ext_resource path="res://TopDownHouse_FurnitureState1.png" type="Texture" id=4]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.37.01_PM-removebg-preview.png" type="Texture" id=5]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.38.09_PM-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.55_PM-removebg-preview.png" type="Texture" id=5]
+[ext_resource path="res://jizz2/mom Anterior 0.png" type="Texture" id=6]
 [ext_resource path="res://william (2).png" type="Texture" id=7]
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=8]
 [ext_resource path="res://PartySceneScript.gd" type="Script" id=9]
@@ -13,28 +13,6 @@
 [ext_resource path="res://output-onlinepngtools.png" type="Texture" id=11]
 [ext_resource path="res://pony.png" type="Texture" id=12]
 [ext_resource path="res://cake (2).png" type="Texture" id=13]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.37.46_PM-removebg-preview.png" type="Texture" id=14]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.37.55_PM-removebg-preview.png" type="Texture" id=15]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.31.16_PM-removebg-preview.png" type="Texture" id=16]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.31.53_PM-removebg-preview.png" type="Texture" id=17]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.32.06_PM-removebg-preview.png" type="Texture" id=18]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.38.22_PM-removebg-preview.png" type="Texture" id=19]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.38.00_PM-removebg-preview.png" type="Texture" id=20]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.32.00_PM-removebg-preview.png" type="Texture" id=21]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.28.47_PM-removebg-preview.png" type="Texture" id=22]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.37.23_PM-removebg-preview.png" type="Texture" id=23]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.30.11_PM-removebg-preview.png" type="Texture" id=24]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.31.33_PM-removebg-preview.png" type="Texture" id=25]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.31.08_PM-removebg-preview.png" type="Texture" id=26]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.37.51_PM-removebg-preview.png" type="Texture" id=27]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.37.16_PM-removebg-preview.png" type="Texture" id=28]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.30.50_PM-removebg-preview.png" type="Texture" id=29]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.38.32_PM-removebg-preview.png" type="Texture" id=30]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.38.27_PM-removebg-preview.png" type="Texture" id=31]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.30.01_PM-removebg-preview.png" type="Texture" id=32]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.30.42_PM-removebg-preview.png" type="Texture" id=33]
-[ext_resource path="res://Screenshot_2023-02-10_at_5.38.04_PM-removebg-preview.png" type="Texture" id=34]
-[ext_resource path="res://Screenshot_2023-02-10_at_6.30.33_PM-removebg-preview.png" type="Texture" id=35]
 
 [sub_resource type="TileSet" id=1]
 0/name = "Terrain (32x32).png 0"
@@ -644,62 +622,6 @@
 7/shapes = [  ]
 7/z_index = 0
 
-[sub_resource type="SpriteFrames" id=5]
-animations = [ {
-"frames": [ ExtResource( 32 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 21 ), ExtResource( 17 ), ExtResource( 21 ), ExtResource( 18 ) ],
-"loop": true,
-"name": "WalkBack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 33 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 29 ) ],
-"loop": true,
-"name": "WalkLeft",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 16 ), ExtResource( 26 ), ExtResource( 16 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "WalkRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 32 ), ExtResource( 22 ), ExtResource( 32 ), ExtResource( 24 ) ],
-"loop": true,
-"name": "WalkFront",
-"speed": 5.0
-} ]
-
-[sub_resource type="SpriteFrames" id=6]
-animations = [ {
-"frames": [ ExtResource( 31 ), ExtResource( 19 ), ExtResource( 31 ), ExtResource( 30 ) ],
-"loop": true,
-"name": "WalkBack",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 27 ), ExtResource( 14 ), ExtResource( 27 ), ExtResource( 15 ) ],
-"loop": true,
-"name": "WalkLeft",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 28 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 34 ), ExtResource( 20 ), ExtResource( 34 ), ExtResource( 6 ) ],
-"loop": true,
-"name": "WalkRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 5 ), ExtResource( 28 ), ExtResource( 23 ) ],
-"loop": true,
-"name": "WalkFront",
-"speed": 5.0
-} ]
-
 [sub_resource type="DynamicFont" id=4]
 size = 20
 font_data = ExtResource( 8 )
@@ -730,21 +652,17 @@ cell_size = Vector2( 16, 16 )
 format = 1
 tile_data = PoolIntArray( 720899, 536870916, 0, 720900, 536870914, 0, 720901, 536870915, 0 )
 
-[node name="Sullivan" type="AnimatedSprite" parent="."]
-position = Vector2( 227, 354 )
-scale = Vector2( 0.169911, 0.184101 )
-frames = SubResource( 5 )
-animation = "idle"
-playing = true
+[node name="Sullivan" type="Sprite" parent="."]
+position = Vector2( 230, 360 )
+scale = Vector2( 0.212389, 0.230126 )
+texture = ExtResource( 5 )
 
-[node name="Stephanie" type="AnimatedSprite" parent="."]
-position = Vector2( 51, 365 )
-scale = Vector2( 0.15, 0.15 )
-frames = SubResource( 6 )
-animation = "Idle"
-playing = true
+[node name="Stephanie" type="Sprite" parent="."]
+position = Vector2( 51, 359 )
+scale = Vector2( 0.855474, 0.943965 )
+texture = ExtResource( 6 )
 
-[node name="William" type="Sprite" parent="."]
+[node name="William(2)" type="Sprite" parent="."]
 position = Vector2( 143, 312 )
 scale = Vector2( 0.156404, 0.167391 )
 texture = ExtResource( 7 )
@@ -757,22 +675,21 @@ margin_bottom = 166.0
 custom_fonts/font = SubResource( 4 )
 text = "Congrats, you brought all the items to William's party!"
 
-[node name="confetti" type="Sprite" parent="."]
+[node name="Output-onlinepngtools" type="Sprite" parent="."]
 position = Vector2( 781, 412 )
 scale = Vector2( 0.262877, 0.346049 )
 texture = ExtResource( 11 )
 
-[node name="Cake" type="Sprite" parent="."]
+[node name="Cake(2)" type="Sprite" parent="."]
 position = Vector2( 835, 220 )
 scale = Vector2( 0.118369, 0.132993 )
 texture = ExtResource( 13 )
 
 [node name="Pony" type="Sprite" parent="."]
-position = Vector2( 480, 349 )
-scale = Vector2( 2.8, 2.30769 )
+position = Vector2( 433, 346 )
 texture = ExtResource( 12 )
 
-[node name="ice cream" type="Sprite" parent="."]
+[node name="MyProject(5)" type="Sprite" parent="."]
 position = Vector2( 87, 73 )
 scale = Vector2( 0.208601, 0.18787 )
 texture = ExtResource( 10 )
