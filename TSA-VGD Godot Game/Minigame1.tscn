@@ -496,7 +496,7 @@ position = Vector2( -1473.13, 6406 )
 shape = SubResource( 15 )
 
 [node name="DeadZoneCollision8" type="CollisionShape2D" parent="DeadZones"]
-position = Vector2( 1530.88, 5064 )
+position = Vector2( 1530.87, 5046 )
 shape = SubResource( 15 )
 
 [node name="DeadZoneCollision9" type="CollisionShape2D" parent="DeadZones"]
@@ -527,7 +527,6 @@ smoothing_speed = 100.0
 scale = Vector2( 0.17, 0.17 )
 frames = SubResource( 23 )
 animation = "WalkLeft"
-frame = 1
 playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="."]

@@ -165,7 +165,7 @@ position = Vector2( 0, -17 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 10 )
 animation = "WalkLeft"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="."]
