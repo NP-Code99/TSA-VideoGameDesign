@@ -93,6 +93,9 @@ rect_pivot_offset = Vector2( 139, 20 )
 custom_colors/font_color_shadow = Color( 0.0705882, 0.054902, 0.054902, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "Sullivan (WASD)"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label3" type="Label" parent="."]
 margin_left = 674.0

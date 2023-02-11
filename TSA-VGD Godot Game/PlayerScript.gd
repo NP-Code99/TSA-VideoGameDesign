@@ -49,7 +49,7 @@ func _physics_process(_delta: float) -> void:
 	elif Input.is_action_pressed("move_right"):
 		animatedSprite.animation = "WalkRight"
 	else:
-		animatedSprite.animation = "Idle"
+		animatedSprite.animation = "idle"
 
 	_velocity = move_and_slide(_velocity, UP_DIRECTION)
 	

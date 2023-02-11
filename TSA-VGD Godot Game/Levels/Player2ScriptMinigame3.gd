@@ -7,7 +7,7 @@ export var jump_strength := 1700.0
 export var maximum_jumps := 2 
 export var double_jump_strength := 1200.0 
 export var gravity := 4500.0 
-onready var animatedSprite = $AnimatedSprite2
+onready var animatedSprite = $AnimatedSprite
 
 var _jumps_made := 0
 var _velocity := Vector2.ZERO

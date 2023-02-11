@@ -1,31 +1,36 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://Actors/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/assets/start-assets/tileset.png" type="Texture" id=2]
 [ext_resource path="res://Actors/Enemy.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/assets/start-assets/background.png" type="Texture" id=4]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.25_PM-removebg-preview.png" type="Texture" id=5]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.49_PM-removebg-preview.png" type="Texture" id=6]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.34_PM-removebg-preview.png" type="Texture" id=7]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.59_PM-removebg-preview.png" type="Texture" id=8]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.43_PM-removebg-preview.png" type="Texture" id=9]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.15_PM-removebg-preview.png" type="Texture" id=10]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.15_PM-removebg-preview.png" type="Texture" id=11]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.59.20_PM-removebg-preview.png" type="Texture" id=12]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.39_PM-removebg-preview.png" type="Texture" id=13]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.55_PM-removebg-preview.png" type="Texture" id=14]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.11_PM-removebg-preview.png" type="Texture" id=15]
-[ext_resource path="res://New Man Sprite/Screenshot_2023-02-01_at_5.57.24_PM-removebg-preview.png" type="Texture" id=16]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.31.16_PM-removebg-preview.png" type="Texture" id=5]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.31.53_PM-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.32.06_PM-removebg-preview.png" type="Texture" id=7]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.32.00_PM-removebg-preview.png" type="Texture" id=8]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.28.47_PM-removebg-preview.png" type="Texture" id=9]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.30.11_PM-removebg-preview.png" type="Texture" id=10]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.31.33_PM-removebg-preview.png" type="Texture" id=11]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.31.08_PM-removebg-preview.png" type="Texture" id=12]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.30.50_PM-removebg-preview.png" type="Texture" id=13]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.30.01_PM-removebg-preview.png" type="Texture" id=14]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.30.42_PM-removebg-preview.png" type="Texture" id=15]
+[ext_resource path="res://Screenshot_2023-02-10_at_6.30.33_PM-removebg-preview.png" type="Texture" id=16]
 [ext_resource path="res://My project (5).png" type="Texture" id=17]
 [ext_resource path="res://Levels/Player2ScriptMinigame3.gd" type="Script" id=18]
-[ext_resource path="res://jizz2/RLateral1.png" type="Texture" id=19]
-[ext_resource path="res://jizz2/mom Anterior 0.png" type="Texture" id=20]
-[ext_resource path="res://jizz2/LLateral1.png" type="Texture" id=21]
-[ext_resource path="res://jizz2/LLateral2.png" type="Texture" id=22]
-[ext_resource path="res://jizz2/RLateral 0.png" type="Texture" id=23]
-[ext_resource path="res://jizz2/RLateral2.png" type="Texture" id=24]
-[ext_resource path="res://jizz2/LLateral 0.png" type="Texture" id=25]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.37.01_PM-removebg-preview.png" type="Texture" id=19]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.38.09_PM-removebg-preview.png" type="Texture" id=20]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.37.46_PM-removebg-preview.png" type="Texture" id=21]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.37.55_PM-removebg-preview.png" type="Texture" id=22]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.38.22_PM-removebg-preview.png" type="Texture" id=23]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.38.00_PM-removebg-preview.png" type="Texture" id=24]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.37.23_PM-removebg-preview.png" type="Texture" id=25]
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=26]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.37.51_PM-removebg-preview.png" type="Texture" id=27]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.37.16_PM-removebg-preview.png" type="Texture" id=28]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.38.32_PM-removebg-preview.png" type="Texture" id=29]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.38.27_PM-removebg-preview.png" type="Texture" id=30]
+[ext_resource path="res://Screenshot_2023-02-10_at_5.38.04_PM-removebg-preview.png" type="Texture" id=31]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
@@ -53,29 +58,29 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 } ]
 0/z_index = 0
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ ExtResource( 12 ), ExtResource( 10 ), ExtResource( 12 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 14 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 13 ), ExtResource( 7 ), ExtResource( 13 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "WalkLeft",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "Idle",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 11 ), ExtResource( 15 ), ExtResource( 11 ), ExtResource( 16 ) ],
+"frames": [ ExtResource( 5 ), ExtResource( 12 ), ExtResource( 5 ), ExtResource( 11 ) ],
 "loop": true,
 "name": "WalkRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 6 ), ExtResource( 14 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "WalkFront",
 "speed": 5.0
@@ -85,21 +90,31 @@ animations = [ {
 radius = 74.0
 height = 48.0
 
-[sub_resource type="SpriteFrames" id=6]
+[sub_resource type="SpriteFrames" id=9]
 animations = [ {
-"frames": [ ExtResource( 20 ) ],
+"frames": [ ExtResource( 30 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 29 ) ],
 "loop": true,
-"name": "Idle",
+"name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 25 ), ExtResource( 21 ), ExtResource( 25 ), ExtResource( 22 ) ],
+"frames": [ ExtResource( 27 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 22 ) ],
 "loop": true,
 "name": "WalkLeft",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 23 ), ExtResource( 19 ), ExtResource( 23 ), ExtResource( 24 ) ],
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "WalkRight",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 25 ) ],
+"loop": true,
+"name": "WalkFront",
 "speed": 5.0
 } ]
 
@@ -125,6 +140,9 @@ rect_scale = Vector2( 5, 5 )
 rect_pivot_offset = Vector2( 418, 708.4 )
 texture = ExtResource( 4 )
 stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2( 40, 0 )
@@ -138,16 +156,16 @@ tile_data = PoolIntArray( -1441532, 0, 0, -1441531, 0, 0, -1441530, 0, 0, -14415
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 274, 677 )
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="Player"]
-scale = Vector2( 0.5, 0.5 )
-frames = SubResource( 3 )
-animation = "WalkFront"
-frame = 3
-playing = true
-
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 zoom = Vector2( 2, 2 )
+
+[node name="AnimatedSprite2" type="AnimatedSprite" parent="Player"]
+position = Vector2( 0, -17 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 10 )
+animation = "WalkLeft"
+playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="."]
 position = Vector2( 552, 674 )
@@ -159,10 +177,10 @@ script = ExtResource( 18 )
 position = Vector2( 21, -76 )
 shape = SubResource( 5 )
 
-[node name="AnimatedSprite2" type="AnimatedSprite" parent="Player2"]
-position = Vector2( 26, -60 )
-scale = Vector2( 1.79717, 1.87644 )
-frames = SubResource( 6 )
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Player2"]
+position = Vector2( 21, -76 )
+scale = Vector2( 0.4, 0.4 )
+frames = SubResource( 9 )
 animation = "Idle"
 playing = true
 
