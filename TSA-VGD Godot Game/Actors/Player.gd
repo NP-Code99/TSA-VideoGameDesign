@@ -16,9 +16,6 @@ var _velocity := Vector2.ZERO
 func _on_EnemyDetector_area_entered(area):
 	_velocity.y = -jump_strength
 
-func _on_EnemyDetector_body_entered(body):
-	queue_free()
-
 
 func _physics_process(_delta: float) -> void:
 	var _horizontal_direction = (
@@ -78,7 +75,7 @@ func _on_cake_body_entered(body: Node) -> void:
 
 
 func _on_ice_cream_body_entered(body: Node) -> void:
-	if body.name == "Player" or body.name == "Player2":
+	if body.name == "Player":
 		MinigameCounter.count()
 		if MinigameCounter.minigamesFinished == 4:
 			TransitionScene.change_scene("res://PartyScene.tscn")
