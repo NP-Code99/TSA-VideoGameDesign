@@ -1682,14 +1682,14 @@ scale = Vector2( 0.163965, 0.18457 )
 texture = ExtResource( 16 )
 
 [node name="Label2" type="Label" parent="Signs/DirectionSign5"]
-margin_left = -115.878
+margin_left = -134.175
 margin_top = -167.958
-margin_right = 192.122
+margin_right = 173.825
 margin_bottom = 35.0423
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 36 )
-text = "GAME
-3 UP"
+text = "GAME 3
+ ↑ ↑ ↑ ↑ "
 
 [node name="DirectionSign6" type="Sprite" parent="Signs"]
 position = Vector2( -13, -104 )

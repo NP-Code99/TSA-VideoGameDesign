@@ -3,7 +3,7 @@
 [ext_resource path="res://fonts/ARCADEPI.TTF" type="DynamicFontData" id=1]
 [ext_resource path="res://StartingScreenScript.gd" type="Script" id=2]
 [ext_resource path="res://LobbySplitScreen.tscn" type="PackedScene" id=3]
-[ext_resource path="res://background/party themed.jpg" type="Texture" id=4]
+[ext_resource path="res://startscreendallee.png" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=6]
 size = 50
