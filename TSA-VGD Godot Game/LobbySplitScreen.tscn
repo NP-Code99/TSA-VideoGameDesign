@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://SplitScreenScript.gd" type="Script" id=1]
 [ext_resource path="res://Camera2DScript.gd" type="Script" id=2]
@@ -7,6 +7,11 @@
 [ext_resource path="res://lobby_music.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+outline_size = 2
 font_data = ExtResource( 4 )
 
 [node name="LobbySplitScreen" type="Node"]
@@ -77,9 +82,28 @@ rect_scale = Vector2( 2, 2 )
 rect_pivot_offset = Vector2( 139, 20 )
 custom_colors/font_color_shadow = Color( 0.105882, 0.0745098, 0.0745098, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Ste[phanie (Arrows"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+text = "Ste[phanie (Arrows)"
 
 [node name="AudioStreamPlayer2D" parent="." instance=ExtResource( 5 )]
+
+[node name="Objective" type="Label" parent="."]
+margin_left = 11.0
+margin_top = 62.0
+margin_right = 475.0
+margin_bottom = 99.0
+rect_pivot_offset = Vector2( 231, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Objective: Complete the four minigames around the map 
+and acquire the items for William's Party."
+
+[node name="Objective2" type="Label" parent="."]
+margin_left = 529.0
+margin_top = 61.0
+margin_right = 993.0
+margin_bottom = 98.0
+rect_pivot_offset = Vector2( 231, 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Objective: Complete the four minigames around the map 
+and acquire the items for William's Party."

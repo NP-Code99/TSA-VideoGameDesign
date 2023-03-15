@@ -60,14 +60,14 @@ points = PoolVector2Array( 0, 0, 80, 0, 80, 80, 0, 80 )
 
 [sub_resource type="SpriteFrames" id=10]
 animations = [ {
-"frames": [ ExtResource( 14 ) ],
-"loop": true,
-"name": "idle",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 8 ), ExtResource( 6 ), ExtResource( 8 ), ExtResource( 7 ) ],
 "loop": true,
 "name": "WalkBack",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "WalkFront",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 15 ), ExtResource( 16 ), ExtResource( 15 ), ExtResource( 13 ) ],
@@ -80,26 +80,31 @@ animations = [ {
 "name": "WalkRight",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 14 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 14 ) ],
 "loop": true,
-"name": "WalkFront",
+"name": "idle",
 "speed": 5.0
 } ]
 
 [sub_resource type="CapsuleShape2D" id=5]
-radius = 74.0
+radius = 101.0
 height = 48.0
 
 [sub_resource type="SpriteFrames" id=9]
 animations = [ {
+"frames": [ ExtResource( 28 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 30 ), ExtResource( 23 ), ExtResource( 30 ), ExtResource( 29 ) ],
 "loop": true,
 "name": "WalkBack",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 28 ) ],
+"frames": [ ExtResource( 28 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 25 ) ],
 "loop": true,
-"name": "Idle",
+"name": "WalkFront",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 27 ), ExtResource( 21 ), ExtResource( 27 ), ExtResource( 22 ) ],
@@ -110,11 +115,6 @@ animations = [ {
 "frames": [ ExtResource( 31 ), ExtResource( 24 ), ExtResource( 31 ), ExtResource( 20 ) ],
 "loop": true,
 "name": "WalkRight",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 28 ), ExtResource( 19 ), ExtResource( 28 ), ExtResource( 25 ) ],
-"loop": true,
-"name": "WalkFront",
 "speed": 5.0
 } ]
 
@@ -160,7 +160,6 @@ tile_data = PoolIntArray( -1441532, 0, 0, -1441531, 0, 0, -1441530, 0, 0, -14415
 position = Vector2( 274, 677 )
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
 zoom = Vector2( 2, 2 )
 
 [node name="AnimatedSprite2" type="AnimatedSprite" parent="Player"]
@@ -168,7 +167,7 @@ position = Vector2( 0, -17 )
 scale = Vector2( 0.4, 0.4 )
 frames = SubResource( 10 )
 animation = "WalkLeft"
-frame = 3
+frame = 1
 playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="."]
