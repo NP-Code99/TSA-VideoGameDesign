@@ -530,7 +530,7 @@ smoothing_speed = 100.0
 scale = Vector2( 0.17, 0.17 )
 frames = SubResource( 23 )
 animation = "WalkLeft"
-frame = 3
+frame = 2
 playing = true
 
 [node name="Player2" type="KinematicBody2D" parent="."]
