@@ -3,9 +3,9 @@
 > A two-player cooperative platformer built in Godot — collect party supplies, conquer mini-games, and throw William the ultimate birthday bash!
 
 [![Gameplay Video](https://img.shields.io/badge/▶%20Watch%20Gameplay-YouTube-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=G0rlQLj1RqY)
+[![Play it here!](https://img.shields.io/badge/▶%20Play%20Now-itch.io-red?style=for-the-badge&logo=github)](https://np-code99.github.io/TSA-VideoGameDesign/)
 
 ---
-
 ## 📖 Story
 
 Stephanie and Sullivan are on a mission — their son **William's birthday party** won't plan itself! Journey through 4 unique worlds, dodge obstacles, solve puzzles, and gather everything needed to throw an unforgettable celebration.
