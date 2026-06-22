@@ -6,8 +6,8 @@
 
 [![GDScript](https://img.shields.io/badge/GDScript-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)](https://godotengine.org)
 [![Godot](https://img.shields.io/badge/Godot%20Engine-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)](https://godotengine.org)
-[![Play Now](https://img.shields.io/badge/%F0%9F%8E%AE%20Play%20Now-itch.io-red?style=for-the-badge)](https://np-code99.github.io/TSA-VideoGameDesign/)
-[![Watch Gameplay](https://img.shields.io/badge/%F0%9F%�%AC%20Watch%20Gameplay-YouTube-red?style=for-the-badge&logo=youtube)](https://www.youtube.com/watch?v=G0rlQLj1RqY)
+[![Play Now](https://img.shields.io/badge/Play%20Now-Live%20Demo-E53935?style=for-the-badge&logo=googlechrome&logoColor=white)](https://np-code99.github.io/TSA-VideoGameDesign/)
+[![Watch Gameplay](https://img.shields.io/badge/Watch%20Gameplay-YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=G0rlQLj1RqY)
 
 ---
 
@@ -121,7 +121,7 @@ The game is live and playable in the browser — no download required.
 
 **[▶ Play Party Mania](https://np-code99.github.io/TSA-VideoGameDesign/)**
 
-**[🎬 Watch Gameplay Video](https://www.youtube.com/watch?v=G0rlQLj1RqY)**
+**[🎬 Watch Gameplay on YouTube](https://www.youtube.com/watch?v=G0rlQLj1RqY)**
 
 ---
 
